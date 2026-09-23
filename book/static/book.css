@@ -32,24 +32,6 @@ article img {
   max-width: 100%;
 }
 
-article a[href$=".pdf"] {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em;
-  margin-block: 0.25rem 1rem;
-  font-weight: 600;
-}
-
-article a[href$=".pdf"]::before {
-  content: "PDF";
-  border: 1px solid currentColor;
-  border-radius: 0.25rem;
-  padding: 0.05rem 0.3rem;
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.7em;
-  letter-spacing: 0.03em;
-}
-
 article mjx-container[display="true"],
 article pre,
 article table {

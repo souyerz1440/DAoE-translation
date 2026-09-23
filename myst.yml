@@ -1,0 +1,56 @@
+version: 1
+
+extends:
+  - toc.yml
+
+project:
+  title: Design and Analysis of Experiments（中文翻译）
+  description: Montgomery《试验设计与分析》中文翻译项目
+  numbering:
+    equations: false
+  static_files:
+    - LXGWWenKai-Regular.ttf
+  keywords:
+    - 试验设计
+    - 统计分析
+    - 方差分析
+    - 因子设计
+    - Design and Analysis of Experiments
+  exclude:
+    - _build/**
+    - .myst/**
+    - .venv-book/**
+    - MinerU-Skill/**
+    - _tools/**
+    - "*.pdf"
+    - "Chapter 01/01_Introduction.md"
+    - "Chapter 01/sections/**"
+    - "Chapter 02/00_Simple_Comparative_Experiments.md"
+    - "Chapter 02/sections/**"
+    - "Chapter 03/00_Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance.md"
+    - "Chapter 03/sections/**"
+    - "Chapter 04/04_Randomized_Blocks_Latin_Squares_and_Related_Designs.md"
+    - "Chapter 04/sections/**"
+    - "Chapter 05/05_Introduction_to_Factorial_Designs.md"
+    - "Chapter 05/sections/**"
+    - "Chapter 06/06_The_2_k_Factorial_Design.md"
+    - "Chapter 06/sections/**"
+    - "Chapter 07/07_Blocking_and_Confounding_in_the_2_k_Factorial_Design.md"
+    - "Chapter 07/sections/**"
+    - "Chapter 08/08_Two-Level_Fractional_Factorial_Designs.md"
+    - "Chapter 08/sections/**"
+    - "Chapter 09/**"
+    - "Chapter 1[0-4]/**"
+
+site:
+  template: book-theme
+  title: 试验设计与分析 中文翻译
+  options:
+    folders: true
+    style: book/static/book.css
+    logo_text: 试验设计与分析 中文翻译
+  nav:
+    - title: 翻译进度
+      url: /book/progress
+    - title: 关于本项目
+      url: /book/about

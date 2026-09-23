@@ -1,0 +1,98 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance",
+        "File":  "00_Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "3.1",
+        "Title":  "An Example",
+        "File":  "01_3.1_An_Example.md",
+        "ImageCount":  3
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "3.2",
+        "Title":  "The Analysis of Variance",
+        "File":  "02_3.2_The_Analysis_of_Variance.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "3.3",
+        "Title":  "Analysis of the Fixed Effects Model",
+        "File":  "03_3.3_Analysis_of_the_Fixed_Effects_Model.md",
+        "ImageCount":  1
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "3.4",
+        "Title":  "Model Adequacy Checking",
+        "File":  "04_3.4_Model_Adequacy_Checking.md",
+        "ImageCount":  6
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "3.5",
+        "Title":  "Practical Interpretation of Results",
+        "File":  "05_3.5_Practical_Interpretation_of_Results.md",
+        "ImageCount":  3
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "3.6",
+        "Title":  "Sample Computer Output",
+        "File":  "06_3.6_Sample_Computer_Output.md",
+        "ImageCount":  4
+    },
+    {
+        "Order":  7,
+        "Kind":  "numbered",
+        "Label":  "3.7",
+        "Title":  "Determining Sample Size",
+        "File":  "07_3.7_Determining_Sample_Size.md",
+        "ImageCount":  1
+    },
+    {
+        "Order":  8,
+        "Kind":  "numbered",
+        "Label":  "3.8",
+        "Title":  "Other Examples of Single-Factor Experiments",
+        "File":  "08_3.8_Other_Examples_of_Single-Factor_Experiments.md",
+        "ImageCount":  6
+    },
+    {
+        "Order":  9,
+        "Kind":  "numbered",
+        "Label":  "3.9",
+        "Title":  "The Random Effects Model",
+        "File":  "09_3.9_The_Random_Effects_Model.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  10,
+        "Kind":  "numbered",
+        "Label":  "3.10",
+        "Title":  "The Regression Approach to the Analysis of Variance",
+        "File":  "10_3.10_The_Regression_Approach_to_the_Analysis_of_Variance.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  11,
+        "Kind":  "numbered",
+        "Label":  "3.11",
+        "Title":  "Nonparametric Methods in the Analysis of Variance",
+        "File":  "11_3.11_Nonparametric_Methods_in_the_Analysis_of_Variance.md",
+        "ImageCount":  0
+    }
+]

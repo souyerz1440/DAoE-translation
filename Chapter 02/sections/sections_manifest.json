@@ -1,0 +1,58 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Simple_Comparative_Experiments",
+        "File":  "00_Simple_Comparative_Experiments.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "2.1",
+        "Title":  "Introduction",
+        "File":  "01_2.1_Introduction.md",
+        "ImageCount":  1
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "2.2",
+        "Title":  "Basic Statistical Concepts",
+        "File":  "02_2.2_Basic_Statistical_Concepts.md",
+        "ImageCount":  4
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "2.3",
+        "Title":  "Sampling and Sampling Distributions",
+        "File":  "03_2.3_Sampling_and_Sampling_Distributions.md",
+        "ImageCount":  4
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "2.4",
+        "Title":  "Inferences About the Differences in Means, Randomized Designs",
+        "File":  "04_2.4_Inferences_About_the_Differences_in_Means_Randomized_Designs.md",
+        "ImageCount":  6
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "2.5",
+        "Title":  "Inferences About the Differences in Means, Paired Comparison Designs",
+        "File":  "05_2.5_Inferences_About_the_Differences_in_Means_Paired_Comparison_Designs.md",
+        "ImageCount":  1
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "2.6",
+        "Title":  "Inferences About the Variances of Normal Distributions",
+        "File":  "06_2.6_Inferences_About_the_Variances_of_Normal_Distributions.md",
+        "ImageCount":  0
+    }
+]

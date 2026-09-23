@@ -1,0 +1,74 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Fitting_Regression_Models",
+        "File":  "00_Fitting_Regression_Models.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "10.1",
+        "Title":  "Introduction",
+        "File":  "01_10.1_Introduction.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "10.2",
+        "Title":  "Linear Regression Models",
+        "File":  "02_10.2_Linear_Regression_Models.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "10.3",
+        "Title":  "Estimation of the Parameters in Linear Regression Models",
+        "File":  "03_10.3_Estimation_of_the_Parameters_in_Linear_Regression_Models.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "10.4",
+        "Title":  "Hypothesis Testing in Multiple Regression",
+        "File":  "04_10.4_Hypothesis_Testing_in_Multiple_Regression.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "10.5",
+        "Title":  "Confidence Intervals in Multiple Regression",
+        "File":  "05_10.5_Confidence_Intervals_in_Multiple_Regression.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "10.6",
+        "Title":  "Prediction of New Response Observations",
+        "File":  "06_10.6_Prediction_of_New_Response_Observations.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  7,
+        "Kind":  "numbered",
+        "Label":  "10.7",
+        "Title":  "Regression Model Diagnostics",
+        "File":  "07_10.7_Regression_Model_Diagnostics.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  8,
+        "Kind":  "numbered",
+        "Label":  "10.8",
+        "Title":  "Testing for Lack of Fit",
+        "File":  "08_10.8_Testing_for_Lack_of_Fit.md",
+        "ImageCount":  0
+    }
+]

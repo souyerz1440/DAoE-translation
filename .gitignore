@@ -1,0 +1,17 @@
+_build/
+.venv-book/
+node_modules/
+.myst/
+.editor-backups/
+__pycache__/
+start.bat
+*.ps1
+
+# 原书 PDF：仅作本地翻译参照，已由 myst.yml 的 project.exclude 排除出构建；
+# 其中第 9 版对照 PDF 为 109 MB，超过 GitHub 单文件 100 MB 硬上限，无法入库。
+# 如需随仓库分发，请改用 Git LFS。
+/Design and analysis of experiments -- Douglas C_ Montgomery.pdf
+/DesignandAnalysisofExperiments9thEdition.pdf
+
+# 拆分出的章 PDF（本地对照用）。各章首页已改为链接出版社页面，不再发布这些文件。
+/MinerU-Skill/Design_and_analysis_of_experiments_--_Douglas_C_Montgomery_130e1e/split_pdf/

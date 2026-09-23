@@ -1,0 +1,50 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Nested_and_Split-Plot_Designs",
+        "File":  "00_Nested_and_Split-Plot_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "14.1",
+        "Title":  "The Two-Stage Nested Design",
+        "File":  "01_14.1_The_Two-Stage_Nested_Design.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "14.2",
+        "Title":  "The General m-Stage Nested Design",
+        "File":  "02_14.2_The_General_m-Stage_Nested_Design.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "14.3",
+        "Title":  "Designs with Both Nested and Factorial Factors",
+        "File":  "03_14.3_Designs_with_Both_Nested_and_Factorial_Factors.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "14.4",
+        "Title":  "The Split-Plot Design",
+        "File":  "04_14.4_The_Split-Plot_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "14.5",
+        "Title":  "Other Variations of the Split-Plot Design",
+        "File":  "05_14.5_Other_Variations_of_the_Split-Plot_Design.md",
+        "ImageCount":  6
+    }
+]

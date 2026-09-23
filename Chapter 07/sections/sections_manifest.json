@@ -1,0 +1,74 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Blocking_and_Confounding_in_the_2_k_Factorial_Design",
+        "File":  "00_Blocking_and_Confounding_in_the_2_k_Factorial_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "7.1",
+        "Title":  "Introduction",
+        "File":  "01_7.1_Introduction.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "7.2",
+        "Title":  "Blocking a Replicated $2^{k}$ Factorial Design",
+        "File":  "02_7.2_Blocking_a_Replicated_2_k_Factorial_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "7.3",
+        "Title":  "Confounding in the $2^{k}$ Factorial Design",
+        "File":  "03_7.3_Confounding_in_the_2_k_Factorial_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "7.4",
+        "Title":  "Confounding the $2^{k}$ Factorial Design in Two Blocks",
+        "File":  "04_7.4_Confounding_the_2_k_Factorial_Design_in_Two_Blocks.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "7.5",
+        "Title":  "Another Illustration of Why Blocking Is Important",
+        "File":  "05_7.5_Another_Illustration_of_Why_Blocking_Is_Important.md",
+        "ImageCount":  1
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "7.6",
+        "Title":  "Confounding the $2^{k}$ Factorial Design in Four Blocks",
+        "File":  "06_7.6_Confounding_the_2_k_Factorial_Design_in_Four_Blocks.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  7,
+        "Kind":  "numbered",
+        "Label":  "7.7",
+        "Title":  "Confounding the $2^{k}$ Factorial Design in $2^{p}$ Blocks",
+        "File":  "07_7.7_Confounding_the_2_k_Factorial_Design_in_2_p_Blocks.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  8,
+        "Kind":  "numbered",
+        "Label":  "7.8",
+        "Title":  "Partial Confounding",
+        "File":  "08_7.8_Partial_Confounding.md",
+        "ImageCount":  1
+    }
+]

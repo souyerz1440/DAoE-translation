@@ -1,0 +1,78 @@
+# 把 MyST / Jupyter Book v2 电子书构建并发布到 GitHub Pages。
+# 参考：https://mystmd.org/guide/deployment-github-pages
+#
+# 前置条件（只需做一次）：仓库 Settings → Pages → Build and deployment
+# 的 Source 选择 **GitHub Actions**。
+
+name: Deploy Book to GitHub Pages
+
+on:
+  push:
+    # 默认分支；仓库改用 main 时无需修改，两个名字都在监听范围内
+    branches: [master, main]
+  # 允许在 Actions 页面手动触发一次部署
+  workflow_dispatch:
+
+env:
+  # BASE_URL 决定站点相对于域名根目录的地址，同时会影响 CSS/JS 等静态资源的路径。
+  # 本仓库是普通仓库（不是 <user>.github.io），站点位于
+  #   https://souyerz1440.github.io/DAoE-translation/
+  # 因此必须带上仓库名；若日后绑定自定义域名并部署在根路径，改成 BASE_URL: ''。
+  BASE_URL: /${{ github.event.repository.name }}
+
+# 允许 GITHUB_TOKEN 发布到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署；不取消进行中的部署，避免线上站点处于半成品状态
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        # jupyter-book（Python 包）背后是 mystmd，需要 Node 18/20/22+
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-book.txt
+
+      - name: Install Jupyter Book
+        run: pip install -r requirements-book.txt
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build HTML
+        # 与本地 start.bat 使用同一套工具链，构建产物固定为 _build/html
+        run: jupyter-book build --html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_build/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

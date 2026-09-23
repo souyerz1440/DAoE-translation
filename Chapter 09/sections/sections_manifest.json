@@ -1,0 +1,58 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Additional_Design_and_Analysis_Topics_for_Factorial_and_Fractional_Factorial_Designs",
+        "File":  "00_Additional_Design_and_Analysis_Topics_for_Factorial_and_Fractional_Factorial_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "9.1",
+        "Title":  "The $3^{k}$ Factorial Design",
+        "File":  "01_9.1_The_3_k_Factorial_Design.md",
+        "ImageCount":  10
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "9.2",
+        "Title":  "Confounding in the $3^{k}$ Factorial Design",
+        "File":  "02_9.2_Confounding_in_the_3_k_Factorial_Design.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "9.3",
+        "Title":  "Fractional Replication of the $3^{k}$ Factorial Design",
+        "File":  "03_9.3_Fractional_Replication_of_the_3_k_Factorial_Design.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "9.4",
+        "Title":  "Factorials with Mixed Levels",
+        "File":  "04_9.4_Factorials_with_Mixed_Levels.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "9.5",
+        "Title":  "Nonregular Fractional Factorial Designs",
+        "File":  "05_9.5_Nonregular_Fractional_Factorial_Designs.md",
+        "ImageCount":  11
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "9.6",
+        "Title":  "Constructing Factorial and Fractional Factorial Designs Using an Optimal Design Tool",
+        "File":  "06_9.6_Constructing_Factorial_and_Fractional_Factorial_Designs_Using_an_Optimal_Design_Tool.md",
+        "ImageCount":  0
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Robust_Parameter_Design_and_Process_Robustness_Studies",
+        "File":  "00_Robust_Parameter_Design_and_Process_Robustness_Studies.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "12.1",
+        "Title":  "Introduction",
+        "File":  "01_12.1_Introduction.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "12.2",
+        "Title":  "Crossed Array Designs",
+        "File":  "02_12.2_Crossed_Array_Designs.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "12.3",
+        "Title":  "Analysis of the Crossed Array Design",
+        "File":  "03_12.3_Analysis_of_the_Crossed_Array_Design.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "12.4",
+        "Title":  "Combined Array Designs and the Response Model Approach",
+        "File":  "04_12.4_Combined_Array_Designs_and_the_Response_Model_Approach.md",
+        "ImageCount":  7
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "12.5",
+        "Title":  "Choice of Designs",
+        "File":  "05_12.5_Choice_of_Designs.md",
+        "ImageCount":  0
+    }
+]

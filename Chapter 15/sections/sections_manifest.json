@@ -1,0 +1,50 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Other_Design_and_Analysis_Topics",
+        "File":  "00_Other_Design_and_Analysis_Topics.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "15.1",
+        "Title":  "Nonnormal Responses and Transformations",
+        "File":  "01_15.1_Nonnormal_Responses_and_Transformations.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "15.2",
+        "Title":  "Unbalanced Data in a Factorial Design",
+        "File":  "02_15.2_Unbalanced_Data_in_a_Factorial_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "15.3",
+        "Title":  "The Analysis of Covariance",
+        "File":  "03_15.3_The_Analysis_of_Covariance.md",
+        "ImageCount":  7
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "15.4",
+        "Title":  "Repeated Measures",
+        "File":  "04_15.4_Repeated_Measures.md",
+        "ImageCount":  1
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "15.5",
+        "Title":  "Problems",
+        "File":  "05_15.5_Problems.md",
+        "ImageCount":  0
+    }
+]

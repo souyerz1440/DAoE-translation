@@ -1,0 +1,58 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Introduction_to_Factorial_Designs",
+        "File":  "00_Introduction_to_Factorial_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "5.1",
+        "Title":  "Basic Definitions and Principles",
+        "File":  "01_5.1_Basic_Definitions_and_Principles.md",
+        "ImageCount":  8
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "5.2",
+        "Title":  "The Advantage of Factorials",
+        "File":  "02_5.2_The_Advantage_of_Factorials.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "5.3",
+        "Title":  "The Two-Factor Factorial Design",
+        "File":  "03_5.3_The_Two-Factor_Factorial_Design.md",
+        "ImageCount":  8
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "5.4",
+        "Title":  "The General Factorial Design",
+        "File":  "04_5.4_The_General_Factorial_Design.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "5.5",
+        "Title":  "Fitting Response Curves and Surfaces",
+        "File":  "05_5.5_Fitting_Response_Curves_and_Surfaces.md",
+        "ImageCount":  10
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "5.6",
+        "Title":  "Blocking in a Factorial Design",
+        "File":  "06_5.6_Blocking_in_a_Factorial_Design.md",
+        "ImageCount":  2
+    }
+]

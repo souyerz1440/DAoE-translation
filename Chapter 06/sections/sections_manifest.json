@@ -1,0 +1,82 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "The_2_k_Factorial_Design",
+        "File":  "00_The_2_k_Factorial_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "6.1",
+        "Title":  "Introduction",
+        "File":  "01_6.1_Introduction.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "6.2",
+        "Title":  "The $2^{2}$ Design",
+        "File":  "02_6.2_The_2_2_Design.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "6.3",
+        "Title":  "The $2^{3}$ Design",
+        "File":  "03_6.3_The_2_3_Design.md",
+        "ImageCount":  13
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "6.4",
+        "Title":  "The General $2^{k}$ Design",
+        "File":  "04_6.4_The_General_2_k_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "6.5",
+        "Title":  "A Single Replicate of the $2^{k}$ Design",
+        "File":  "05_6.5_A_Single_Replicate_of_the_2_k_Design.md",
+        "ImageCount":  21
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "6.6",
+        "Title":  "Additional Examples of Unreplicated $2^{k}$ Designs",
+        "File":  "06_6.6_Additional_Examples_of_Unreplicated_2_k_Designs.md",
+        "ImageCount":  19
+    },
+    {
+        "Order":  7,
+        "Kind":  "numbered",
+        "Label":  "6.7",
+        "Title":  "$2^{k}$ Designs are Optimal Designs",
+        "File":  "07_6.7_2_k_Designs_are_Optimal_Designs.md",
+        "ImageCount":  3
+    },
+    {
+        "Order":  8,
+        "Kind":  "numbered",
+        "Label":  "6.8",
+        "Title":  "The Addition of Center Points to the $2^{k}$ Design",
+        "File":  "08_6.8_The_Addition_of_Center_Points_to_the_2_k_Design.md",
+        "ImageCount":  6
+    },
+    {
+        "Order":  9,
+        "Kind":  "numbered",
+        "Label":  "6.9",
+        "Title":  "Why We Work with Coded Design Variables",
+        "File":  "09_6.9_Why_We_Work_with_Coded_Design_Variables.md",
+        "ImageCount":  0
+    }
+]

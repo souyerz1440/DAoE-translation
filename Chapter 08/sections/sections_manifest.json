@@ -1,0 +1,82 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Two-Level_Fractional_Factorial_Designs",
+        "File":  "00_Two-Level_Fractional_Factorial_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "8.1",
+        "Title":  "Introduction",
+        "File":  "01_8.1_Introduction.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "8.2",
+        "Title":  "The One-Half Fraction of the $2^{k}$ Design",
+        "File":  "02_8.2_The_One-Half_Fraction_of_the_2_k_Design.md",
+        "ImageCount":  13
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "8.3",
+        "Title":  "The One-Quarter Fraction of the $2^{k}$ Design",
+        "File":  "03_8.3_The_One-Quarter_Fraction_of_the_2_k_Design.md",
+        "ImageCount":  6
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "8.4",
+        "Title":  "The General $2^{k - p}$ Fractional Factorial Design",
+        "File":  "04_8.4_The_General_2_k_-_p_Fractional_Factorial_Design.md",
+        "ImageCount":  4
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "8.5",
+        "Title":  "Alias Structures in Fractional Factorials and Other Designs",
+        "File":  "05_8.5_Alias_Structures_in_Fractional_Factorials_and_Other_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "8.6",
+        "Title":  "Resolution III Designs",
+        "File":  "06_8.6_Resolution_III_Designs.md",
+        "ImageCount":  3
+    },
+    {
+        "Order":  7,
+        "Kind":  "numbered",
+        "Label":  "8.7",
+        "Title":  "Resolution IV and V Designs",
+        "File":  "07_8.7_Resolution_IV_and_V_Designs.md",
+        "ImageCount":  3
+    },
+    {
+        "Order":  8,
+        "Kind":  "numbered",
+        "Label":  "8.8",
+        "Title":  "Supersaturated Designs",
+        "File":  "08_8.8_Supersaturated_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  9,
+        "Kind":  "numbered",
+        "Label":  "8.9",
+        "Title":  "Summary",
+        "File":  "09_8.9_Summary.md",
+        "ImageCount":  0
+    }
+]

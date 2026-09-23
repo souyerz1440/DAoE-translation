@@ -1,0 +1,66 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Response_Surface_Methods_and_Designs",
+        "File":  "00_Response_Surface_Methods_and_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "11.1",
+        "Title":  "Introduction to Response Surface Methodology",
+        "File":  "01_11.1_Introduction_to_Response_Surface_Methodology.md",
+        "ImageCount":  3
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "11.2",
+        "Title":  "The Method of Steepest Ascent",
+        "File":  "02_11.2_The_Method_of_Steepest_Ascent.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "11.3",
+        "Title":  "Analysis of a Second-Order Response Surface",
+        "File":  "03_11.3_Analysis_of_a_Second-Order_Response_Surface.md",
+        "ImageCount":  22
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "11.4",
+        "Title":  "Experimental Designs for Fitting Response Surfaces",
+        "File":  "04_11.4_Experimental_Designs_for_Fitting_Response_Surfaces.md",
+        "ImageCount":  26
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "11.5",
+        "Title":  "Experiments with Computer Models",
+        "File":  "05_11.5_Experiments_with_Computer_Models.md",
+        "ImageCount":  8
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "11.6",
+        "Title":  "Mixture Experiments",
+        "File":  "06_11.6_Mixture_Experiments.md",
+        "ImageCount":  10
+    },
+    {
+        "Order":  7,
+        "Kind":  "numbered",
+        "Label":  "11.7",
+        "Title":  "Evolutionary Operation",
+        "File":  "07_11.7_Evolutionary_Operation.md",
+        "ImageCount":  2
+    }
+]

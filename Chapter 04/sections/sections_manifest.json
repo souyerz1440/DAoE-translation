@@ -1,0 +1,42 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Randomized_Blocks_Latin_Squares_and_Related_Designs",
+        "File":  "00_Randomized_Blocks_Latin_Squares_and_Related_Designs.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "4.1",
+        "Title":  "The Randomized Complete Block Design",
+        "File":  "01_4.1_The_Randomized_Complete_Block_Design.md",
+        "ImageCount":  5
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "4.2",
+        "Title":  "The Latin Square Design",
+        "File":  "02_4.2_The_Latin_Square_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "4.3",
+        "Title":  "The Graeco-Latin Square Design",
+        "File":  "03_4.3_The_Graeco-Latin_Square_Design.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "4.4",
+        "Title":  "Balanced Incomplete Block Designs",
+        "File":  "04_4.4_Balanced_Incomplete_Block_Designs.md",
+        "ImageCount":  0
+    }
+]

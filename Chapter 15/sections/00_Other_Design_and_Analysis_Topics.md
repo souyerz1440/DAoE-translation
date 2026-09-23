@@ -1,0 +1,56 @@
+CHAPTER 15
+
+# Other Design and Analysis Topics
+
+## CHAPTER OUTLINE
+
+- **15.1 NONNORMAL RESPONSES AND TRANSFORMATIONS**
+  - 15.1.1 Selecting a Transformation: The Box–Cox Method
+  - 15.1.2 The Generalized Linear Model
+- **15.2 UNBALANCED DATA IN A FACTORIAL DESIGN**
+  - 15.2.1 Proportional Data: An Easy Case
+  - 15.2.2 Approximate Methods
+  - 15.2.3 The Exact Method
+- **15.3 THE ANALYSIS OF COVARIANCE**
+  - 15.3.1 Description of the Procedure
+  - 15.3.2 Computer Solution
+  - 15.3.3 Development by the General Regression Significance Test
+  - 15.3.4 Factorial Experiments with Covariates
+- **15.4 REPEATED MEASURES**
+- **SUPPLEMENTAL MATERIAL FOR CHAPTER 15**
+  - S15.1 The Form of a Transformation
+  - S15.2 Selecting $\lambda$ in the Box–Cox Method
+  - S15.3 Generalized Linear Models
+    - S15.3.1 Models with a Binary Response Variable
+    - S15.3.2 Estimating the Parameters in a Logistic Regression Model
+    - S15.3.3 Interpreting the Parameters in a Logistic Regression Model
+    - S15.3.4 Hypothesis Tests on Model Parameters
+    - S15.3.5 Poisson Regression
+    - S15.3.6 The Generalized Linear Model
+    - S15.3.7 Link Functions and Linear Predictors
+    - S15.3.8 Parameter Estimation in the Generalized Linear Model
+    - S15.3.9 Prediction and Estimation with the Generalized Linear Model
+    - S15.3.10 Residual Analysis in the Generalized Linear Model
+  - S15.4 Unbalanced Data in a Factorial Design
+    - S15.4.1 The Regression Model Approach
+    - S15.4.2 The Type 3 Analysis
+    - S15.4.3 Type 1, Type 2, Type 3 and Type 4 Sums of Squares
+    - S15.4.4 Analysis of Unbalanced Data using the Means Model
+
+The supplemental material is on the textbook website www.wiley.com/college/montgomery.
+
+## CHAPTER LEARNING OBJECTIVES
+
+1. Know how to use the Box-Cox method to select a variance—stabilizing transformation.
+
+2. Understand how the generalized linear model can be used to analyze some experiments with nonnormal response distributions.
+
+3. Understand some basic analysis methods for unbalanced factorial designs.
+
+4. Know how to analyze an experiment with a covariate.
+
+5. Know how to design an experiment when the values of the covariate are known in advance.
+
+6. Know how to analyze a single-factor design with repeated measures of the response.
+
+The subject of statistically designed experiments is an extensive one. The previous chapters have provided an introductory presentation of many of the basic concepts and methods, yet in some cases we have only been able to provide an overview. For example, there are book-length presentations of topics such as response surface methodology, mixture experiments, variance component estimation, and optimal design. In this chapter, we provide an overview of several other topics that the experimenter may potentially find useful.

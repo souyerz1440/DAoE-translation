@@ -1,0 +1,943 @@
+{
+    "SourcePdf":  "D:\\Code for VS\\试验设计与分析翻译计划\\Design and analysis of experiments -- Douglas C_ Montgomery.pdf",
+    "PdfPageCount":  682,
+    "ChapterCount":  14,
+    "Chapters":  [
+                     {
+                         "Number":  1,
+                         "Title":  "Introduction",
+                         "StartPage":  11,
+                         "EndPage":  31,
+                         "PageCount":  21,
+                         "Pdf":  "split_pdf/chapters/01_Introduction.pdf",
+                         "MinerUMarkdown":  "markdown/01_Introduction.md",
+                         "SectionCount":  6,
+                         "Sections":  [
+                                          {
+                                              "Label":  "1.1",
+                                              "Major":  1,
+                                              "Minor":  1,
+                                              "Title":  "Strategy of Experimentation",
+                                              "StartPage":  11,
+                                              "EndPage":  17
+                                          },
+                                          {
+                                              "Label":  "1.2",
+                                              "Major":  1,
+                                              "Minor":  2,
+                                              "Title":  "Some Typical Applications of Experimental Design",
+                                              "StartPage":  17,
+                                              "EndPage":  21
+                                          },
+                                          {
+                                              "Label":  "1.3",
+                                              "Major":  1,
+                                              "Minor":  3,
+                                              "Title":  "Basic Principles",
+                                              "StartPage":  21,
+                                              "EndPage":  23
+                                          },
+                                          {
+                                              "Label":  "1.4",
+                                              "Major":  1,
+                                              "Minor":  4,
+                                              "Title":  "Guidelines for Designing Experiments",
+                                              "StartPage":  23,
+                                              "EndPage":  29
+                                          },
+                                          {
+                                              "Label":  "1.5",
+                                              "Major":  1,
+                                              "Minor":  5,
+                                              "Title":  "A Brief History of Statistical Design",
+                                              "StartPage":  29,
+                                              "EndPage":  30
+                                          },
+                                          {
+                                              "Label":  "1.6",
+                                              "Major":  1,
+                                              "Minor":  6,
+                                              "Title":  "Summary: Using Statistical Techniques in Experimentation",
+                                              "StartPage":  30,
+                                              "EndPage":  31
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  2,
+                         "Title":  "Simple Comparative Experiments",
+                         "StartPage":  32,
+                         "EndPage":  64,
+                         "PageCount":  33,
+                         "Pdf":  "split_pdf/chapters/02_Simple_Comparative_Experiments.pdf",
+                         "MinerUMarkdown":  "markdown/02_Simple_Comparative_Experiments.md",
+                         "SectionCount":  6,
+                         "Sections":  [
+                                          {
+                                              "Label":  "2.1",
+                                              "Major":  2,
+                                              "Minor":  1,
+                                              "Title":  "Introduction",
+                                              "StartPage":  32,
+                                              "EndPage":  33
+                                          },
+                                          {
+                                              "Label":  "2.2",
+                                              "Major":  2,
+                                              "Minor":  2,
+                                              "Title":  "Basic Statistical Concepts",
+                                              "StartPage":  33,
+                                              "EndPage":  37
+                                          },
+                                          {
+                                              "Label":  "2.3",
+                                              "Major":  2,
+                                              "Minor":  3,
+                                              "Title":  "Sampling and Sampling Distributions",
+                                              "StartPage":  37,
+                                              "EndPage":  42
+                                          },
+                                          {
+                                              "Label":  "2.4",
+                                              "Major":  2,
+                                              "Minor":  4,
+                                              "Title":  "Inferences About the Differences in Means, Randomized Designs",
+                                              "StartPage":  42,
+                                              "EndPage":  57
+                                          },
+                                          {
+                                              "Label":  "2.5",
+                                              "Major":  2,
+                                              "Minor":  5,
+                                              "Title":  "Inferences About the Differences in Means, Paired Comparison Designs",
+                                              "StartPage":  57,
+                                              "EndPage":  62
+                                          },
+                                          {
+                                              "Label":  "2.6",
+                                              "Major":  2,
+                                              "Minor":  6,
+                                              "Title":  "Inferences About the Variances of Normal Distributions",
+                                              "StartPage":  62,
+                                              "EndPage":  64
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  3,
+                         "Title":  "Experiments with a Single Factor - The Analysis of Variance",
+                         "StartPage":  65,
+                         "EndPage":  124,
+                         "PageCount":  60,
+                         "Pdf":  "split_pdf/chapters/03_Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance.pdf",
+                         "MinerUMarkdown":  "markdown/03_Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance.md",
+                         "SectionCount":  11,
+                         "Sections":  [
+                                          {
+                                              "Label":  "3.1",
+                                              "Major":  3,
+                                              "Minor":  1,
+                                              "Title":  "An Example",
+                                              "StartPage":  65,
+                                              "EndPage":  68
+                                          },
+                                          {
+                                              "Label":  "3.2",
+                                              "Major":  3,
+                                              "Minor":  2,
+                                              "Title":  "The Analysis of Variance",
+                                              "StartPage":  68,
+                                              "EndPage":  69
+                                          },
+                                          {
+                                              "Label":  "3.3",
+                                              "Major":  3,
+                                              "Minor":  3,
+                                              "Title":  "Analysis of the Fixed Effects Model",
+                                              "StartPage":  69,
+                                              "EndPage":  78
+                                          },
+                                          {
+                                              "Label":  "3.4",
+                                              "Major":  3,
+                                              "Minor":  4,
+                                              "Title":  "Model Adequacy Checking",
+                                              "StartPage":  78,
+                                              "EndPage":  86
+                                          },
+                                          {
+                                              "Label":  "3.5",
+                                              "Major":  3,
+                                              "Minor":  5,
+                                              "Title":  "Practical Interpretation of Results",
+                                              "StartPage":  86,
+                                              "EndPage":  99
+                                          },
+                                          {
+                                              "Label":  "3.6",
+                                              "Major":  3,
+                                              "Minor":  6,
+                                              "Title":  "Sample Computer Output",
+                                              "StartPage":  99,
+                                              "EndPage":  103
+                                          },
+                                          {
+                                              "Label":  "3.7",
+                                              "Major":  3,
+                                              "Minor":  7,
+                                              "Title":  "Determining Sample Size",
+                                              "StartPage":  103,
+                                              "EndPage":  105
+                                          },
+                                          {
+                                              "Label":  "3.8",
+                                              "Major":  3,
+                                              "Minor":  8,
+                                              "Title":  "Other Examples of Single-Factor Experiments",
+                                              "StartPage":  105,
+                                              "EndPage":  111
+                                          },
+                                          {
+                                              "Label":  "3.9",
+                                              "Major":  3,
+                                              "Minor":  9,
+                                              "Title":  "The Random Effects Model",
+                                              "StartPage":  111,
+                                              "EndPage":  119
+                                          },
+                                          {
+                                              "Label":  "3.10",
+                                              "Major":  3,
+                                              "Minor":  10,
+                                              "Title":  "The Regression Approach to the Analysis of Variance",
+                                              "StartPage":  119,
+                                              "EndPage":  123
+                                          },
+                                          {
+                                              "Label":  "3.11",
+                                              "Major":  3,
+                                              "Minor":  11,
+                                              "Title":  "Nonparametric Methods in the Analysis of Variance",
+                                              "StartPage":  123,
+                                              "EndPage":  124
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  4,
+                         "Title":  "Randomized Blocks, Latin Squares, and Related Designs",
+                         "StartPage":  125,
+                         "EndPage":  161,
+                         "PageCount":  37,
+                         "Pdf":  "split_pdf/chapters/04_Randomized_Blocks_Latin_Squares_and_Related_Designs.pdf",
+                         "MinerUMarkdown":  "markdown/04_Randomized_Blocks_Latin_Squares_and_Related_Designs.md",
+                         "SectionCount":  4,
+                         "Sections":  [
+                                          {
+                                              "Label":  "4.1",
+                                              "Major":  4,
+                                              "Minor":  1,
+                                              "Title":  "The Randomized Complete Block Design",
+                                              "StartPage":  125,
+                                              "EndPage":  143
+                                          },
+                                          {
+                                              "Label":  "4.2",
+                                              "Major":  4,
+                                              "Minor":  2,
+                                              "Title":  "The Latin Square Design",
+                                              "StartPage":  143,
+                                              "EndPage":  150
+                                          },
+                                          {
+                                              "Label":  "4.3",
+                                              "Major":  4,
+                                              "Minor":  3,
+                                              "Title":  "The Graeco-Latin Square Design",
+                                              "StartPage":  150,
+                                              "EndPage":  152
+                                          },
+                                          {
+                                              "Label":  "4.4",
+                                              "Major":  4,
+                                              "Minor":  4,
+                                              "Title":  "Balanced Incomplete Block Designs",
+                                              "StartPage":  152,
+                                              "EndPage":  161
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  5,
+                         "Title":  "Introduction to Factorial Designs",
+                         "StartPage":  162,
+                         "EndPage":  203,
+                         "PageCount":  42,
+                         "Pdf":  "split_pdf/chapters/05_Introduction_to_Factorial_Designs.pdf",
+                         "MinerUMarkdown":  "markdown/05_Introduction_to_Factorial_Designs.md",
+                         "SectionCount":  6,
+                         "Sections":  [
+                                          {
+                                              "Label":  "5.1",
+                                              "Major":  5,
+                                              "Minor":  1,
+                                              "Title":  "Basic Definitions and Principles",
+                                              "StartPage":  162,
+                                              "EndPage":  165
+                                          },
+                                          {
+                                              "Label":  "5.2",
+                                              "Major":  5,
+                                              "Minor":  2,
+                                              "Title":  "The Advantage of Factorials",
+                                              "StartPage":  165,
+                                              "EndPage":  166
+                                          },
+                                          {
+                                              "Label":  "5.3",
+                                              "Major":  5,
+                                              "Minor":  3,
+                                              "Title":  "The Two-Factor Factorial Design",
+                                              "StartPage":  166,
+                                              "EndPage":  184
+                                          },
+                                          {
+                                              "Label":  "5.4",
+                                              "Major":  5,
+                                              "Minor":  4,
+                                              "Title":  "The General Factorial Design",
+                                              "StartPage":  184,
+                                              "EndPage":  189
+                                          },
+                                          {
+                                              "Label":  "5.5",
+                                              "Major":  5,
+                                              "Minor":  5,
+                                              "Title":  "Fitting Response Curves and Surfaces",
+                                              "StartPage":  189,
+                                              "EndPage":  198
+                                          },
+                                          {
+                                              "Label":  "5.6",
+                                              "Major":  5,
+                                              "Minor":  6,
+                                              "Title":  "Blocking in a Factorial Design",
+                                              "StartPage":  198,
+                                              "EndPage":  203
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  6,
+                         "Title":  "The 2^k Factorial Design",
+                         "StartPage":  204,
+                         "EndPage":  265,
+                         "PageCount":  62,
+                         "Pdf":  "split_pdf/chapters/06_The_2_k_Factorial_Design.pdf",
+                         "MinerUMarkdown":  "markdown/06_The_2_k_Factorial_Design.md",
+                         "SectionCount":  9,
+                         "Sections":  [
+                                          {
+                                              "Label":  "6.1",
+                                              "Major":  6,
+                                              "Minor":  1,
+                                              "Title":  "Introduction",
+                                              "StartPage":  204,
+                                              "EndPage":  205
+                                          },
+                                          {
+                                              "Label":  "6.2",
+                                              "Major":  6,
+                                              "Minor":  2,
+                                              "Title":  "The 2^2 Design",
+                                              "StartPage":  205,
+                                              "EndPage":  213
+                                          },
+                                          {
+                                              "Label":  "6.3",
+                                              "Major":  6,
+                                              "Minor":  3,
+                                              "Title":  "The 2^3 Design",
+                                              "StartPage":  213,
+                                              "EndPage":  225
+                                          },
+                                          {
+                                              "Label":  "6.4",
+                                              "Major":  6,
+                                              "Minor":  4,
+                                              "Title":  "The General 2^k Design",
+                                              "StartPage":  225,
+                                              "EndPage":  228
+                                          },
+                                          {
+                                              "Label":  "6.5",
+                                              "Major":  6,
+                                              "Minor":  5,
+                                              "Title":  "A Single Replicate of the 2^k Design",
+                                              "StartPage":  228,
+                                              "EndPage":  241
+                                          },
+                                          {
+                                              "Label":  "6.6",
+                                              "Major":  6,
+                                              "Minor":  6,
+                                              "Title":  "Additional Examples of Unreplicated 2^k Designs",
+                                              "StartPage":  241,
+                                              "EndPage":  253
+                                          },
+                                          {
+                                              "Label":  "6.7",
+                                              "Major":  6,
+                                              "Minor":  7,
+                                              "Title":  "2^k Designs are Optimal Designs",
+                                              "StartPage":  253,
+                                              "EndPage":  258
+                                          },
+                                          {
+                                              "Label":  "6.8",
+                                              "Major":  6,
+                                              "Minor":  8,
+                                              "Title":  "The Addition of Center Points to the 2^k Design",
+                                              "StartPage":  258,
+                                              "EndPage":  263
+                                          },
+                                          {
+                                              "Label":  "6.9",
+                                              "Major":  6,
+                                              "Minor":  9,
+                                              "Title":  "Why We Work with Coded Design Variables",
+                                              "StartPage":  263,
+                                              "EndPage":  265
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  7,
+                         "Title":  "Blocking and Confounding in the 2^k Factorial Design",
+                         "StartPage":  266,
+                         "EndPage":  283,
+                         "PageCount":  18,
+                         "Pdf":  "split_pdf/chapters/07_Blocking_and_Confounding_in_the_2_k_Factorial_Design.pdf",
+                         "MinerUMarkdown":  "markdown/07_Blocking_and_Confounding_in_the_2_k_Factorial_Design.md",
+                         "SectionCount":  8,
+                         "Sections":  [
+                                          {
+                                              "Label":  "7.1",
+                                              "Major":  7,
+                                              "Minor":  1,
+                                              "Title":  "Introduction",
+                                              "StartPage":  266,
+                                              "EndPage":  266
+                                          },
+                                          {
+                                              "Label":  "7.2",
+                                              "Major":  7,
+                                              "Minor":  2,
+                                              "Title":  "Blocking a Replicated 2^k Factorial Design",
+                                              "StartPage":  266,
+                                              "EndPage":  269
+                                          },
+                                          {
+                                              "Label":  "7.3",
+                                              "Major":  7,
+                                              "Minor":  3,
+                                              "Title":  "Confounding in the 2^k Factorial Design",
+                                              "StartPage":  269,
+                                              "EndPage":  269
+                                          },
+                                          {
+                                              "Label":  "7.4",
+                                              "Major":  7,
+                                              "Minor":  4,
+                                              "Title":  "Confounding the 2^k Factorial Design in Two Blocks",
+                                              "StartPage":  269,
+                                              "EndPage":  277
+                                          },
+                                          {
+                                              "Label":  "7.5",
+                                              "Major":  7,
+                                              "Minor":  5,
+                                              "Title":  "Another Illustration of Why Blocking Is Important",
+                                              "StartPage":  277,
+                                              "EndPage":  278
+                                          },
+                                          {
+                                              "Label":  "7.6",
+                                              "Major":  7,
+                                              "Minor":  6,
+                                              "Title":  "Confounding the 2^k Factorial Design in Four Blocks",
+                                              "StartPage":  278,
+                                              "EndPage":  280
+                                          },
+                                          {
+                                              "Label":  "7.7",
+                                              "Major":  7,
+                                              "Minor":  7,
+                                              "Title":  "Confounding the 2^k Factorial Design in 2^p Blocks",
+                                              "StartPage":  280,
+                                              "EndPage":  281
+                                          },
+                                          {
+                                              "Label":  "7.8",
+                                              "Major":  7,
+                                              "Minor":  8,
+                                              "Title":  "Partial Confounding",
+                                              "StartPage":  281,
+                                              "EndPage":  283
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  8,
+                         "Title":  "Two-Level Fractional Factorial Designs",
+                         "StartPage":  284,
+                         "EndPage":  341,
+                         "PageCount":  58,
+                         "Pdf":  "split_pdf/chapters/08_Two-Level_Fractional_Factorial_Designs.pdf",
+                         "MinerUMarkdown":  "markdown/08_Two-Level_Fractional_Factorial_Designs.md",
+                         "SectionCount":  9,
+                         "Sections":  [
+                                          {
+                                              "Label":  "8.1",
+                                              "Major":  8,
+                                              "Minor":  1,
+                                              "Title":  "Introduction",
+                                              "StartPage":  284,
+                                              "EndPage":  285
+                                          },
+                                          {
+                                              "Label":  "8.2",
+                                              "Major":  8,
+                                              "Minor":  2,
+                                              "Title":  "The One-Half Fraction of the 2^k Design",
+                                              "StartPage":  285,
+                                              "EndPage":  300
+                                          },
+                                          {
+                                              "Label":  "8.3",
+                                              "Major":  8,
+                                              "Minor":  3,
+                                              "Title":  "The One-Quarter Fraction of the 2^k Design",
+                                              "StartPage":  300,
+                                              "EndPage":  307
+                                          },
+                                          {
+                                              "Label":  "8.4",
+                                              "Major":  8,
+                                              "Minor":  4,
+                                              "Title":  "The General 2^(k-p) Fractional Factorial Design",
+                                              "StartPage":  307,
+                                              "EndPage":  316
+                                          },
+                                          {
+                                              "Label":  "8.5",
+                                              "Major":  8,
+                                              "Minor":  5,
+                                              "Title":  "Alias Structures in Fractional Factorials and Other Designs",
+                                              "StartPage":  316,
+                                              "EndPage":  318
+                                          },
+                                          {
+                                              "Label":  "8.6",
+                                              "Major":  8,
+                                              "Minor":  6,
+                                              "Title":  "Resolution III Designs",
+                                              "StartPage":  318,
+                                              "EndPage":  332
+                                          },
+                                          {
+                                              "Label":  "8.7",
+                                              "Major":  8,
+                                              "Minor":  7,
+                                              "Title":  "Resolution IV and V Designs",
+                                              "StartPage":  332,
+                                              "EndPage":  339
+                                          },
+                                          {
+                                              "Label":  "8.8",
+                                              "Major":  8,
+                                              "Minor":  8,
+                                              "Title":  "Supersaturated Designs",
+                                              "StartPage":  339,
+                                              "EndPage":  341
+                                          },
+                                          {
+                                              "Label":  "8.9",
+                                              "Major":  8,
+                                              "Minor":  9,
+                                              "Title":  "Summary",
+                                              "StartPage":  341,
+                                              "EndPage":  341
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  9,
+                         "Title":  "Additional Design and Analysis Topics for Factorial and Fractional Factorial Designs",
+                         "StartPage":  342,
+                         "EndPage":  391,
+                         "PageCount":  50,
+                         "Pdf":  "split_pdf/chapters/09_Additional_Design_and_Analysis_Topics_for_Factorial_and_Fractional_Factorial_Designs.pdf",
+                         "MinerUMarkdown":  "markdown/09_Additional_Design_and_Analysis_Topics_for_Factorial_and_Fractional_Factorial_Designs.md",
+                         "SectionCount":  6,
+                         "Sections":  [
+                                          {
+                                              "Label":  "9.1",
+                                              "Major":  9,
+                                              "Minor":  1,
+                                              "Title":  "The 3^k Factorial Design",
+                                              "StartPage":  343,
+                                              "EndPage":  350
+                                          },
+                                          {
+                                              "Label":  "9.2",
+                                              "Major":  9,
+                                              "Minor":  2,
+                                              "Title":  "Confounding in the 3^k Factorial Design",
+                                              "StartPage":  350,
+                                              "EndPage":  355
+                                          },
+                                          {
+                                              "Label":  "9.3",
+                                              "Major":  9,
+                                              "Minor":  3,
+                                              "Title":  "Fractional Replication of the 3^k Factorial Design",
+                                              "StartPage":  355,
+                                              "EndPage":  359
+                                          },
+                                          {
+                                              "Label":  "9.4",
+                                              "Major":  9,
+                                              "Minor":  4,
+                                              "Title":  "Factorials with Mixed Levels",
+                                              "StartPage":  359,
+                                              "EndPage":  362
+                                          },
+                                          {
+                                              "Label":  "9.5",
+                                              "Major":  9,
+                                              "Minor":  5,
+                                              "Title":  "Nonregular Fractional Factorial Designs",
+                                              "StartPage":  362,
+                                              "EndPage":  379
+                                          },
+                                          {
+                                              "Label":  "9.6",
+                                              "Major":  9,
+                                              "Minor":  6,
+                                              "Title":  "Constructing Factorial and Fractional Factorial Designs Using an Optimal Design Tool",
+                                              "StartPage":  379,
+                                              "EndPage":  391
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  10,
+                         "Title":  "Fitting Regression Models",
+                         "StartPage":  392,
+                         "EndPage":  417,
+                         "PageCount":  26,
+                         "Pdf":  "split_pdf/chapters/10_Fitting_Regression_Models.pdf",
+                         "MinerUMarkdown":  "markdown/10_Fitting_Regression_Models.md",
+                         "SectionCount":  8,
+                         "Sections":  [
+                                          {
+                                              "Label":  "10.1",
+                                              "Major":  10,
+                                              "Minor":  1,
+                                              "Title":  "Introduction",
+                                              "StartPage":  392,
+                                              "EndPage":  393
+                                          },
+                                          {
+                                              "Label":  "10.2",
+                                              "Major":  10,
+                                              "Minor":  2,
+                                              "Title":  "Linear Regression Models",
+                                              "StartPage":  393,
+                                              "EndPage":  394
+                                          },
+                                          {
+                                              "Label":  "10.3",
+                                              "Major":  10,
+                                              "Minor":  3,
+                                              "Title":  "Estimation of the Parameters in Linear Regression Models",
+                                              "StartPage":  394,
+                                              "EndPage":  405
+                                          },
+                                          {
+                                              "Label":  "10.4",
+                                              "Major":  10,
+                                              "Minor":  4,
+                                              "Title":  "Hypothesis Testing in Multiple Regression",
+                                              "StartPage":  405,
+                                              "EndPage":  409
+                                          },
+                                          {
+                                              "Label":  "10.5",
+                                              "Major":  10,
+                                              "Minor":  5,
+                                              "Title":  "Confidence Intervals in Multiple Regression",
+                                              "StartPage":  409,
+                                              "EndPage":  411
+                                          },
+                                          {
+                                              "Label":  "10.6",
+                                              "Major":  10,
+                                              "Minor":  6,
+                                              "Title":  "Prediction of New Response Observations",
+                                              "StartPage":  411,
+                                              "EndPage":  412
+                                          },
+                                          {
+                                              "Label":  "10.7",
+                                              "Major":  10,
+                                              "Minor":  7,
+                                              "Title":  "Regression Model Diagnostics",
+                                              "StartPage":  412,
+                                              "EndPage":  415
+                                          },
+                                          {
+                                              "Label":  "10.8",
+                                              "Major":  10,
+                                              "Minor":  8,
+                                              "Title":  "Testing for Lack of Fit",
+                                              "StartPage":  415,
+                                              "EndPage":  417
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  11,
+                         "Title":  "Response Surface Methods and Designs",
+                         "StartPage":  418,
+                         "EndPage":  486,
+                         "PageCount":  69,
+                         "Pdf":  "split_pdf/chapters/11_Response_Surface_Methods_and_Designs.pdf",
+                         "MinerUMarkdown":  "markdown/11_Response_Surface_Methods_and_Designs.md",
+                         "SectionCount":  7,
+                         "Sections":  [
+                                          {
+                                              "Label":  "11.1",
+                                              "Major":  11,
+                                              "Minor":  1,
+                                              "Title":  "Introduction to Response Surface Methodology",
+                                              "StartPage":  418,
+                                              "EndPage":  421
+                                          },
+                                          {
+                                              "Label":  "11.2",
+                                              "Major":  11,
+                                              "Minor":  2,
+                                              "Title":  "The Method of Steepest Ascent",
+                                              "StartPage":  421,
+                                              "EndPage":  426
+                                          },
+                                          {
+                                              "Label":  "11.3",
+                                              "Major":  11,
+                                              "Minor":  3,
+                                              "Title":  "Analysis of a Second-Order Response Surface",
+                                              "StartPage":  426,
+                                              "EndPage":  440
+                                          },
+                                          {
+                                              "Label":  "11.4",
+                                              "Major":  11,
+                                              "Minor":  4,
+                                              "Title":  "Experimental Designs for Fitting Response Surfaces",
+                                              "StartPage":  440,
+                                              "EndPage":  464
+                                          },
+                                          {
+                                              "Label":  "11.5",
+                                              "Major":  11,
+                                              "Minor":  5,
+                                              "Title":  "Experiments with Computer Models",
+                                              "StartPage":  464,
+                                              "EndPage":  471
+                                          },
+                                          {
+                                              "Label":  "11.6",
+                                              "Major":  11,
+                                              "Minor":  6,
+                                              "Title":  "Mixture Experiments",
+                                              "StartPage":  471,
+                                              "EndPage":  482
+                                          },
+                                          {
+                                              "Label":  "11.7",
+                                              "Major":  11,
+                                              "Minor":  7,
+                                              "Title":  "Evolutionary Operation",
+                                              "StartPage":  482,
+                                              "EndPage":  486
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  12,
+                         "Title":  "Robust Parameter Design and Process Robustness Studies",
+                         "StartPage":  487,
+                         "EndPage":  502,
+                         "PageCount":  16,
+                         "Pdf":  "split_pdf/chapters/12_Robust_Parameter_Design_and_Process_Robustness_Studies.pdf",
+                         "MinerUMarkdown":  "markdown/12_Robust_Parameter_Design_and_Process_Robustness_Studies.md",
+                         "SectionCount":  5,
+                         "Sections":  [
+                                          {
+                                              "Label":  "12.1",
+                                              "Major":  12,
+                                              "Minor":  1,
+                                              "Title":  "Introduction",
+                                              "StartPage":  487,
+                                              "EndPage":  489
+                                          },
+                                          {
+                                              "Label":  "12.2",
+                                              "Major":  12,
+                                              "Minor":  2,
+                                              "Title":  "Crossed Array Designs",
+                                              "StartPage":  489,
+                                              "EndPage":  491
+                                          },
+                                          {
+                                              "Label":  "12.3",
+                                              "Major":  12,
+                                              "Minor":  3,
+                                              "Title":  "Analysis of the Crossed Array Design",
+                                              "StartPage":  491,
+                                              "EndPage":  494
+                                          },
+                                          {
+                                              "Label":  "12.4",
+                                              "Major":  12,
+                                              "Minor":  4,
+                                              "Title":  "Combined Array Designs and the Response Model Approach",
+                                              "StartPage":  494,
+                                              "EndPage":  500
+                                          },
+                                          {
+                                              "Label":  "12.5",
+                                              "Major":  12,
+                                              "Minor":  5,
+                                              "Title":  "Choice of Designs",
+                                              "StartPage":  500,
+                                              "EndPage":  502
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  13,
+                         "Title":  "Experiments with Random Factors",
+                         "StartPage":  503,
+                         "EndPage":  527,
+                         "PageCount":  25,
+                         "Pdf":  "split_pdf/chapters/13_Experiments_with_Random_Factors.pdf",
+                         "MinerUMarkdown":  "markdown/13_Experiments_with_Random_Factors.md",
+                         "SectionCount":  6,
+                         "Sections":  [
+                                          {
+                                              "Label":  "13.1",
+                                              "Major":  13,
+                                              "Minor":  1,
+                                              "Title":  "Random Effects Models",
+                                              "StartPage":  503,
+                                              "EndPage":  504
+                                          },
+                                          {
+                                              "Label":  "13.2",
+                                              "Major":  13,
+                                              "Minor":  2,
+                                              "Title":  "The Two-Factor Factorial with Random Factors",
+                                              "StartPage":  504,
+                                              "EndPage":  510
+                                          },
+                                          {
+                                              "Label":  "13.3",
+                                              "Major":  13,
+                                              "Minor":  3,
+                                              "Title":  "The Two-Factor Mixed Model",
+                                              "StartPage":  510,
+                                              "EndPage":  515
+                                          },
+                                          {
+                                              "Label":  "13.4",
+                                              "Major":  13,
+                                              "Minor":  4,
+                                              "Title":  "Rules for Expected Mean Squares",
+                                              "StartPage":  515,
+                                              "EndPage":  518
+                                          },
+                                          {
+                                              "Label":  "13.5",
+                                              "Major":  13,
+                                              "Minor":  5,
+                                              "Title":  "Approximate F-Tests",
+                                              "StartPage":  518,
+                                              "EndPage":  522
+                                          },
+                                          {
+                                              "Label":  "13.6",
+                                              "Major":  13,
+                                              "Minor":  6,
+                                              "Title":  "Some Additional Topics on Estimation of Variance Components",
+                                              "StartPage":  522,
+                                              "EndPage":  527
+                                          }
+                                      ]
+                     },
+                     {
+                         "Number":  14,
+                         "Title":  "Nested and Split-Plot Designs",
+                         "StartPage":  528,
+                         "EndPage":  560,
+                         "PageCount":  33,
+                         "Pdf":  "split_pdf/chapters/14_Nested_and_Split-Plot_Designs.pdf",
+                         "MinerUMarkdown":  "markdown/14_Nested_and_Split-Plot_Designs.md",
+                         "SectionCount":  5,
+                         "Sections":  [
+                                          {
+                                              "Label":  "14.1",
+                                              "Major":  14,
+                                              "Minor":  1,
+                                              "Title":  "The Two-Stage Nested Design",
+                                              "StartPage":  528,
+                                              "EndPage":  538
+                                          },
+                                          {
+                                              "Label":  "14.2",
+                                              "Major":  14,
+                                              "Minor":  2,
+                                              "Title":  "The General m-Stage Nested Design",
+                                              "StartPage":  538,
+                                              "EndPage":  540
+                                          },
+                                          {
+                                              "Label":  "14.3",
+                                              "Major":  14,
+                                              "Minor":  3,
+                                              "Title":  "Designs with Both Nested and Factorial Factors",
+                                              "StartPage":  540,
+                                              "EndPage":  544
+                                          },
+                                          {
+                                              "Label":  "14.4",
+                                              "Major":  14,
+                                              "Minor":  4,
+                                              "Title":  "The Split-Plot Design",
+                                              "StartPage":  544,
+                                              "EndPage":  550
+                                          },
+                                          {
+                                              "Label":  "14.5",
+                                              "Major":  14,
+                                              "Minor":  5,
+                                              "Title":  "Other Variations of the Split-Plot Design",
+                                              "StartPage":  550,
+                                              "EndPage":  560
+                                          }
+                                      ]
+                     }
+                 ]
+}

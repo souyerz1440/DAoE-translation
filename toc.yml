@@ -1,0 +1,109 @@
+version: 1
+
+project:
+  toc:
+    - file: book/index.md
+      title: 首页
+    - file: book/progress.md
+      title: 翻译进度
+    - file: Chapter 01/translations_zh/00_Introduction_zh.md
+      title: 第 1 章 引言
+      children:
+        - file: Chapter 01/translations_zh/01_1.1_Strategy_of_Experimentation_zh.md
+        - file: Chapter 01/translations_zh/02_1.2_Some_Typical_Applications_of_Experimental_Design_zh.md
+        - file: Chapter 01/translations_zh/03_1.3_Basic_Principles_zh.md
+        - file: Chapter 01/translations_zh/04_1.4_Guidelines_for_Designing_Experiments_zh.md
+        - file: Chapter 01/translations_zh/05_1.5_A_Brief_History_of_Statistical_Design_zh.md
+        - file: Chapter 01/translations_zh/06_1.6_Summary_Using_Statistical_Techniques_in_Experimentation_zh.md
+        - file: Chapter 01/translations_zh/S1_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 02/translations_zh/00_Simple_Comparative_Experiments_zh.md
+      title: 第 2 章 简单比较试验
+      children:
+        - file: Chapter 02/translations_zh/01_2.1_Introduction_zh.md
+        - file: Chapter 02/translations_zh/02_2.2_Basic_Statistical_Concepts_zh.md
+        - file: Chapter 02/translations_zh/03_2.3_Sampling_and_Sampling_Distributions_zh.md
+        - file: Chapter 02/translations_zh/04_2.4_Inferences_About_the_Differences_in_Means_Randomized_Designs_zh.md
+        - file: Chapter 02/translations_zh/05_2.5_Inferences_About_the_Differences_in_Means_Paired_Comparison_Designs_zh.md
+        - file: Chapter 02/translations_zh/06_2.6_Inferences_About_the_Variances_of_Normal_Distributions_zh.md
+        - file: Chapter 02/translations_zh/S2_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 03/translations_zh/00_Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance_zh.md
+      title: 第 3 章 单因子试验：方差分析
+      children:
+        - file: Chapter 03/translations_zh/01_3.1_An_Example_zh.md
+        - file: Chapter 03/translations_zh/02_3.2_The_Analysis_of_Variance_zh.md
+        - file: Chapter 03/translations_zh/03_3.3_Analysis_of_the_Fixed_Effects_Model_zh.md
+        - file: Chapter 03/translations_zh/04_3.4_Model_Adequacy_Checking_zh.md
+        - file: Chapter 03/translations_zh/05_3.5_Practical_Interpretation_of_Results_zh.md
+        - file: Chapter 03/translations_zh/06_3.6_Sample_Computer_Output_zh.md
+        - file: Chapter 03/translations_zh/07_3.7_Determining_Sample_Size_zh.md
+        - file: Chapter 03/translations_zh/08_3.8_Other_Examples_of_Single-Factor_Experiments_zh.md
+        - file: Chapter 03/translations_zh/09_3.9_The_Random_Effects_Model_zh.md
+        - file: Chapter 03/translations_zh/10_3.10_The_Regression_Approach_to_the_Analysis_of_Variance_zh.md
+        - file: Chapter 03/translations_zh/11_3.11_Nonparametric_Methods_in_the_Analysis_of_Variance_zh.md
+        - file: Chapter 03/translations_zh/S3_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 04/translations_zh/00_Randomized_Blocks_Latin_Squares_and_Related_Designs_zh.md
+      title: 第 4 章 随机区组、拉丁方及相关设计
+      children:
+        - file: Chapter 04/translations_zh/01_4.1_The_Randomized_Complete_Block_Design_zh.md
+        - file: Chapter 04/translations_zh/02_4.2_The_Latin_Square_Design_zh.md
+        - file: Chapter 04/translations_zh/03_4.3_The_Graeco-Latin_Square_Design_zh.md
+        - file: Chapter 04/translations_zh/04_4.4_Balanced_Incomplete_Block_Designs_zh.md
+        - file: Chapter 04/translations_zh/S4_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 05/translations_zh/00_Introduction_to_Factorial_Designs_zh.md
+      title: 第 5 章 因子设计导论
+      children:
+        - file: Chapter 05/translations_zh/01_5.1_Basic_Definitions_and_Principles_zh.md
+        - file: Chapter 05/translations_zh/02_5.2_The_Advantage_of_Factorials_zh.md
+        - file: Chapter 05/translations_zh/03_5.3_The_Two-Factor_Factorial_Design_zh.md
+        - file: Chapter 05/translations_zh/04_5.4_The_General_Factorial_Design_zh.md
+        - file: Chapter 05/translations_zh/05_5.5_Fitting_Response_Curves_and_Surfaces_zh.md
+        - file: Chapter 05/translations_zh/06_5.6_Blocking_in_a_Factorial_Design_zh.md
+        - file: Chapter 05/translations_zh/S5_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 06/translations_zh/00_The_2_k_Factorial_Design_zh.md
+      title: 第 6 章 $2^{k}$ 因子设计
+      children:
+        - file: Chapter 06/translations_zh/01_6.1_Introduction_zh.md
+        - file: Chapter 06/translations_zh/02_6.2_The_2_2_Design_zh.md
+        - file: Chapter 06/translations_zh/03_6.3_The_2_3_Design_zh.md
+        - file: Chapter 06/translations_zh/04_6.4_The_General_2_k_Design_zh.md
+        - file: Chapter 06/translations_zh/05_6.5_A_Single_Replicate_of_the_2_k_Design_zh.md
+        - file: Chapter 06/translations_zh/06_6.6_Additional_Examples_of_Unreplicated_2_k_Designs_zh.md
+        - file: Chapter 06/translations_zh/07_6.7_2_k_Designs_are_Optimal_Designs_zh.md
+        - file: Chapter 06/translations_zh/08_6.8_The_Addition_of_Center_Points_to_the_2_k_Design_zh.md
+        - file: Chapter 06/translations_zh/09_6.9_Why_We_Work_with_Coded_Design_Variables_zh.md
+        - file: Chapter 06/translations_zh/S6_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 07/translations_zh/00_Blocking_and_Confounding_in_the_2_k_Factorial_Design_zh.md
+      title: 第 7 章 $2^{k}$ 因子设计中的区组化与混杂
+      children:
+        - file: Chapter 07/translations_zh/01_7.1_Introduction_zh.md
+        - file: Chapter 07/translations_zh/02_7.2_Blocking_a_Replicated_2_k_Factorial_Design_zh.md
+        - file: Chapter 07/translations_zh/03_7.3_Confounding_in_the_2_k_Factorial_Design_zh.md
+        - file: Chapter 07/translations_zh/04_7.4_Confounding_the_2_k_Factorial_Design_in_Two_Blocks_zh.md
+        - file: Chapter 07/translations_zh/05_7.5_Another_Illustration_of_Why_Blocking_Is_Important_zh.md
+        - file: Chapter 07/translations_zh/06_7.6_Confounding_the_2_k_Factorial_Design_in_Four_Blocks_zh.md
+        - file: Chapter 07/translations_zh/07_7.7_Confounding_the_2_k_Factorial_Design_in_2_p_Blocks_zh.md
+        - file: Chapter 07/translations_zh/08_7.8_Partial_Confounding_zh.md
+        - file: Chapter 07/translations_zh/S7_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 08/translations_zh/00_Two-Level_Fractional_Factorial_Designs_zh.md
+      title: 第 8 章 二水平分式因子设计
+      children:
+        - file: Chapter 08/translations_zh/01_8.1_Introduction_zh.md
+        - file: Chapter 08/translations_zh/02_8.2_The_One-Half_Fraction_of_the_2_k_Design_zh.md
+        - file: Chapter 08/translations_zh/03_8.3_The_One-Quarter_Fraction_of_the_2_k_Design_zh.md
+        - file: Chapter 08/translations_zh/04_8.4_The_General_2_k_-_p_Fractional_Factorial_Design_zh.md
+        - file: Chapter 08/translations_zh/05_8.5_Alias_Structures_in_Fractional_Factorials_and_Other_Designs_zh.md
+        - file: Chapter 08/translations_zh/06_8.6_Resolution_III_Designs_zh.md
+        - file: Chapter 08/translations_zh/07_8.7_Resolution_IV_and_V_Designs_zh.md
+        - file: Chapter 08/translations_zh/08_8.8_Supersaturated_Designs_zh.md
+        - file: Chapter 08/translations_zh/09_8.9_Summary_zh.md
+        - file: Chapter 08/translations_zh/S8_补充材料_zh.md
+          title: 补充材料
+    - file: book/about.md
+      title: 关于本项目

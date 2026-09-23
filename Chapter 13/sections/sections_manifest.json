@@ -1,0 +1,58 @@
+[
+    {
+        "Order":  0,
+        "Kind":  "intro",
+        "Label":  "",
+        "Title":  "Experiments_with_Random_Factors",
+        "File":  "00_Experiments_with_Random_Factors.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  1,
+        "Kind":  "numbered",
+        "Label":  "13.1",
+        "Title":  "Random Effects Models",
+        "File":  "01_13.1_Random_Effects_Models.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  2,
+        "Kind":  "numbered",
+        "Label":  "13.2",
+        "Title":  "The Two-Factor Factorial with Random Factors",
+        "File":  "02_13.2_The_Two-Factor_Factorial_with_Random_Factors.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  3,
+        "Kind":  "numbered",
+        "Label":  "13.3",
+        "Title":  "The Two-Factor Mixed Model",
+        "File":  "03_13.3_The_Two-Factor_Mixed_Model.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  4,
+        "Kind":  "numbered",
+        "Label":  "13.4",
+        "Title":  "Rules for Expected Mean Squares",
+        "File":  "04_13.4_Rules_for_Expected_Mean_Squares.md",
+        "ImageCount":  0
+    },
+    {
+        "Order":  5,
+        "Kind":  "numbered",
+        "Label":  "13.5",
+        "Title":  "Approximate $F$ -Tests",
+        "File":  "05_13.5_Approximate_F_-Tests.md",
+        "ImageCount":  2
+    },
+    {
+        "Order":  6,
+        "Kind":  "numbered",
+        "Label":  "13.6",
+        "Title":  "Some Additional Topics on Estimation of Variance Components",
+        "File":  "06_13.6_Some_Additional_Topics_on_Estimation_of_Variance_Components.md",
+        "ImageCount":  0
+    }
+]

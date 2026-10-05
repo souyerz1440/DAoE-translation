@@ -105,5 +105,81 @@ project:
         - file: Chapter 08/translations_zh/09_8.9_Summary_zh.md
         - file: Chapter 08/translations_zh/S8_补充材料_zh.md
           title: 补充材料
+    - file: Chapter 09/translations_zh/00_Additional_Design_and_Analysis_Topics_for_Factorial_and_Fractional_Factorial_Designs_zh.md
+      title: 第 9 章 因子设计与分式因子设计的其他设计和分析专题
+      children:
+        - file: Chapter 09/translations_zh/01_9.1_The_3_k_Factorial_Design_zh.md
+        - file: Chapter 09/translations_zh/02_9.2_Confounding_in_the_3_k_Factorial_Design_zh.md
+        - file: Chapter 09/translations_zh/03_9.3_Fractional_Replication_of_the_3_k_Factorial_Design_zh.md
+        - file: Chapter 09/translations_zh/04_9.4_Factorials_with_Mixed_Levels_zh.md
+        - file: Chapter 09/translations_zh/05_9.5_Nonregular_Fractional_Factorial_Designs_zh.md
+        - file: Chapter 09/translations_zh/06_9.6_Constructing_Factorial_and_Fractional_Factorial_Designs_Using_an_Optimal_Design_Tool_zh.md
+        - file: Chapter 09/translations_zh/S9_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 10/translations_zh/00_Fitting_Regression_Models_zh.md
+      title: 第 10 章 拟合回归模型
+      children:
+        - file: Chapter 10/translations_zh/01_10.1_Introduction_zh.md
+        - file: Chapter 10/translations_zh/02_10.2_Linear_Regression_Models_zh.md
+        - file: Chapter 10/translations_zh/03_10.3_Estimation_of_the_Parameters_in_Linear_Regression_Models_zh.md
+        - file: Chapter 10/translations_zh/04_10.4_Hypothesis_Testing_in_Multiple_Regression_zh.md
+        - file: Chapter 10/translations_zh/05_10.5_Confidence_Intervals_in_Multiple_Regression_zh.md
+        - file: Chapter 10/translations_zh/06_10.6_Prediction_of_New_Response_Observations_zh.md
+        - file: Chapter 10/translations_zh/07_10.7_Regression_Model_Diagnostics_zh.md
+        - file: Chapter 10/translations_zh/08_10.8_Testing_for_Lack_of_Fit_zh.md
+        - file: Chapter 10/translations_zh/S10_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 11/translations_zh/00_Response_Surface_Methods_and_Designs_zh.md
+      title: 第 11 章 响应面方法与设计
+      children:
+        - file: Chapter 11/translations_zh/01_11.1_Introduction_to_Response_Surface_Methodology_zh.md
+        - file: Chapter 11/translations_zh/02_11.2_The_Method_of_Steepest_Ascent_zh.md
+        - file: Chapter 11/translations_zh/03_11.3_Analysis_of_a_Second-Order_Response_Surface_zh.md
+        - file: Chapter 11/translations_zh/04_11.4_Experimental_Designs_for_Fitting_Response_Surfaces_zh.md
+        - file: Chapter 11/translations_zh/05_11.5_Experiments_with_Computer_Models_zh.md
+        - file: Chapter 11/translations_zh/06_11.6_Mixture_Experiments_zh.md
+        - file: Chapter 11/translations_zh/07_11.7_Evolutionary_Operation_zh.md
+        - file: Chapter 11/translations_zh/S11_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 12/translations_zh/00_Robust_Parameter_Design_and_Process_Robustness_Studies_zh.md
+      title: 第 12 章 稳健参数设计与过程稳健性研究
+      children:
+        - file: Chapter 12/translations_zh/01_12.1_Introduction_zh.md
+        - file: Chapter 12/translations_zh/02_12.2_Crossed_Array_Designs_zh.md
+        - file: Chapter 12/translations_zh/03_12.3_Analysis_of_the_Crossed_Array_Design_zh.md
+        - file: Chapter 12/translations_zh/04_12.4_Combined_Array_Designs_and_the_Response_Model_Approach_zh.md
+        - file: Chapter 12/translations_zh/05_12.5_Choice_of_Designs_zh.md
+        - file: Chapter 12/translations_zh/S12_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 13/translations_zh/00_Experiments_with_Random_Factors_zh.md
+      title: 第 13 章 随机因子试验
+      children:
+        - file: Chapter 13/translations_zh/01_13.1_Random_Effects_Models_zh.md
+        - file: Chapter 13/translations_zh/02_13.2_The_Two-Factor_Factorial_with_Random_Factors_zh.md
+        - file: Chapter 13/translations_zh/03_13.3_The_Two-Factor_Mixed_Model_zh.md
+        - file: Chapter 13/translations_zh/04_13.4_Rules_for_Expected_Mean_Squares_zh.md
+        - file: Chapter 13/translations_zh/05_13.5_Approximate_F_-Tests_zh.md
+        - file: Chapter 13/translations_zh/06_13.6_Some_Additional_Topics_on_Estimation_of_Variance_Components_zh.md
+        - file: Chapter 13/translations_zh/S13_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 14/translations_zh/00_Nested_and_Split-Plot_Designs_zh.md
+      title: 第 14 章 嵌套设计与裂区设计
+      children:
+        - file: Chapter 14/translations_zh/01_14.1_The_Two-Stage_Nested_Design_zh.md
+        - file: Chapter 14/translations_zh/02_14.2_The_General_m-Stage_Nested_Design_zh.md
+        - file: Chapter 14/translations_zh/03_14.3_Designs_with_Both_Nested_and_Factorial_Factors_zh.md
+        - file: Chapter 14/translations_zh/04_14.4_The_Split-Plot_Design_zh.md
+        - file: Chapter 14/translations_zh/05_14.5_Other_Variations_of_the_Split-Plot_Design_zh.md
+        - file: Chapter 14/translations_zh/S14_补充材料_zh.md
+          title: 补充材料
+    - file: Chapter 15/translations_zh/00_Other_Design_and_Analysis_Topics_zh.md
+      title: 第 15 章 其他设计与分析专题
+      children:
+        - file: Chapter 15/translations_zh/01_15.1_Nonnormal_Responses_and_Transformations_zh.md
+        - file: Chapter 15/translations_zh/02_15.2_Unbalanced_Data_in_a_Factorial_Design_zh.md
+        - file: Chapter 15/translations_zh/03_15.3_The_Analysis_of_Covariance_zh.md
+        - file: Chapter 15/translations_zh/04_15.4_Repeated_Measures_zh.md
+        - file: Chapter 15/translations_zh/S15_补充材料_zh.md
+          title: 补充材料
     - file: book/about.md
       title: 关于本项目

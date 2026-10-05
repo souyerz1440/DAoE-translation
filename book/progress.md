@@ -17,11 +17,13 @@ description: 《试验设计与分析》中文翻译各章的当前状态
 | 第 6 章 | The $2^{k}$ Factorial Design | 9 | 已上线 | 已上线 |
 | 第 7 章 | Blocking and Confounding in the $2^{k}$ Factorial Design | 8 | 已上线 | 已上线 |
 | 第 8 章 | Two-Level Fractional Factorial Designs | 9 | 已上线 | 已上线 |
-| 第 9 章 | Additional Design and Analysis Topics for Factorial and Fractional Factorial Designs | 6 | 未开始 | 未开始 |
-| 第 10 章 | Fitting Regression Models | 8 | 未开始 | 未开始 |
-| 第 11 章 | Response Surface Methods and Designs | 7 | 未开始 | 未开始 |
-| 第 12 章 | Robust Parameter Design and Process Robustness Studies | 5 | 未开始 | 未开始 |
-| 第 13 章 | Experiments with Random Factors | 6 | 未开始 | 未开始 |
-| 第 14 章 | Nested and Split-Plot Designs | 5 | 未开始 | 未开始 |
+| 第 9 章 | Additional Design and Analysis Topics for Factorial and Fractional Factorial Designs | 6 | 已上线 | 已上线 |
+| 第 10 章 | Fitting Regression Models | 8 | 已上线 | 已上线 |
+| 第 11 章 | Response Surface Methods and Designs | 7 | 已收录 | 已收录 |
+| 第 12 章 | Robust Parameter Design and Process Robustness Studies | 5 | 已收录 | 已收录 |
+| 第 13 章 | Experiments with Random Factors | 6 | 已收录 | 已收录 |
+| 第 14 章 | Nested and Split-Plot Designs | 5 | 已收录 | 已收录 |
+
+| 第 15 章 | Other Design and Analysis Topics | 4 | 已收录 | 已收录 |
 
 “节数”指该章二级 Section 的数量（不含章首页）。“补充材料”指原书网站所附 Supplemental Text Material 的译文，见每章目录末尾。

@@ -39,8 +39,20 @@ project:
     - "Chapter 07/sections/**"
     - "Chapter 08/08_Two-Level_Fractional_Factorial_Designs.md"
     - "Chapter 08/sections/**"
-    - "Chapter 09/**"
-    - "Chapter 1[0-4]/**"
+    - "Chapter 09/09_Additional_Design_and_Analysis_Topics_for_Factorial_and_Fractional_Factorial_Designs.md"
+    - "Chapter 09/sections/**"
+    - "Chapter 10/10_Fitting_Regression_Models.md"
+    - "Chapter 10/sections/**"
+    - "Chapter 11/11_Response_Surface_Methods_and_Designs.md"
+    - "Chapter 11/sections/**"
+    - "Chapter 12/12_Robust_Parameter_Design_and_Process_Robustness_Studies.md"
+    - "Chapter 12/sections/**"
+    - "Chapter 13/13_Experiments_with_Random_Factors.md"
+    - "Chapter 13/sections/**"
+    - "Chapter 14/14_Nested_and_Split-Plot_Designs.md"
+    - "Chapter 14/sections/**"
+    - "Chapter 15/15_Other_Design_and_Analysis_Topics.md"
+    - "Chapter 15/sections/**"
 
 site:
   template: book-theme

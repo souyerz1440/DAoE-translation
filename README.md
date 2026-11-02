@@ -8,6 +8,14 @@
 
 ## 内容范围
 
+新增“习题与答案”栏目：入口为 `Exercises/index.md`，顶部菜单和前 3 章章首页均可进入。按第 9 版编号完整收录前 3 章 143 题，题目、数据与答案解析均为中文；原答案题号错位及必要勘误在对应题旁注明。
+
+习题按“章节 → 题号 → 独立页面”组织：`Exercises/translations_zh/chapter02.md` 是章目录，`Exercises/translations_zh/chapter02/exercise-2-31.md` 是单题页。每页包含完整中文背景、各小问、数据、直接展示的答案，以及上一题、下一题和关联题链接。
+
+数据为 `Exercises/data/chapter01-03.json`，单题目录清单为 `Exercises/data/pages.json`，图表位于 `Exercises/images/`。维护时编辑 `_tools/exercise_templates/` 中的中文稿，再运行 `python _tools/build_exercises.py` 复算数据、生成单题页与章节索引，并同步 `toc.yml`（需要 numpy、scipy、matplotlib）。仅调整文字或页面组织时，可用 `python _tools/build_exercises.py --reuse-figures` 复用已有图表。常规电子书构建直接使用已生成文件，无需这些计算依赖。可运行 `python _tools/verify_exercises.py` 检查题号、页面导航、数据、引用和关键复算结果。
+
+公式使用主题对应的 KaTeX 0.15.2 样式与字体，本地副本位于 `book/static/katex/`，保留原 MIT 许可证，避免 CDN 无法访问时公式重影或排版错乱。
+
 | 项目 | 值 |
 | --- | --- |
 | 原书 PDF 总页数 | 682 页（扫描件，无文本层，163 ppi） |

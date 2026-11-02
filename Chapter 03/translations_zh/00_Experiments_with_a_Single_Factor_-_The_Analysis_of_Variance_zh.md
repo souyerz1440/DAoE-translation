@@ -1,5 +1,7 @@
 # 单因子试验：方差分析
 
+[本章习题与答案（第 9 版，71 题）](../../Exercises/translations_zh/chapter03.md)
+
 > 本页对应原书第 3 章。原书为 Douglas C. Montgomery, *Design and Analysis of Experiments*, 10th ed., Wiley, 2019（ISBN 978-1-119-49244-3）；本项目不附带原书电子版，需对照原文请见[出版社页面](https://www.wiley.com/en-us/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443)。
 
 ## 本章学习目标

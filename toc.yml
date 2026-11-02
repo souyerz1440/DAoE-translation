@@ -6,6 +6,304 @@ project:
       title: 首页
     - file: book/progress.md
       title: 翻译进度
+    - file: Exercises/index.md
+      title: 习题与答案
+      children:
+        - file: Exercises/translations_zh/chapter01.md
+          title: 第 1 章　引言习题
+          children:
+            - file: Exercises/translations_zh/chapter01/exercise-1-1.md
+              title: "1.1 爆米花中未爆开玉米粒的比例"
+            - file: Exercises/translations_zh/chapter01/exercise-1-2.md
+              title: "1.2 米饭烹煮试验"
+            - file: Exercises/translations_zh/chapter01/exercise-1-3.md
+              title: "1.3 花卉生长试验"
+            - file: Exercises/translations_zh/chapter01/exercise-1-4.md
+              title: "1.4 自选试验"
+            - file: Exercises/translations_zh/chapter01/exercise-1-5.md
+              title: "1.5 Fisher 与洛桑试验站"
+            - file: Exercises/translations_zh/chapter01/exercise-1-6.md
+              title: "1.6 改进商业网站"
+            - file: Exercises/translations_zh/chapter01/exercise-1-7.md
+              title: "1.7 汽车燃油经济性"
+            - file: Exercises/translations_zh/chapter01/exercise-1-8.md
+              title: "1.8 独立重复与重复测量"
+            - file: Exercises/translations_zh/chapter01/exercise-1-9.md
+              title: "1.9 随机化的重要性"
+            - file: Exercises/translations_zh/chapter01/exercise-1-10.md
+              title: "1.10 一次大试验还是序贯试验"
+            - file: Exercises/translations_zh/chapter01/exercise-1-11.md
+              title: "1.11 信用卡营销试验"
+            - file: Exercises/translations_zh/chapter01/exercise-1-12.md
+              title: "1.12 电商网站点击试验"
+        - file: Exercises/translations_zh/chapter02.md
+          title: 第 2 章　简单比较试验习题
+          children:
+            - file: Exercises/translations_zh/chapter02/exercise-2-1.md
+              title: "2.1 补全样本统计量"
+            - file: Exercises/translations_zh/chapter02/exercise-2-2.md
+              title: "2.2 由总和与标准误求均值和标准差"
+            - file: Exercises/translations_zh/chapter02/exercise-2-3.md
+              title: "2.3 双侧 Z 检验的 P 值"
+            - file: Exercises/translations_zh/chapter02/exercise-2-4.md
+              title: "2.4 右侧 Z 检验的 P 值"
+            - file: Exercises/translations_zh/chapter02/exercise-2-5.md
+              title: "2.5 单样本 Z 输出"
+            - file: Exercises/translations_zh/chapter02/exercise-2-6.md
+              title: "2.6 等方差两样本双侧 t 检验"
+            - file: Exercises/translations_zh/chapter02/exercise-2-7.md
+              title: "2.7 等方差两样本右侧 t 检验"
+            - file: Exercises/translations_zh/chapter02/exercise-2-8.md
+              title: "2.8 正态性与均值为 10 的检验"
+            - file: Exercises/translations_zh/chapter02/exercise-2-9.md
+              title: "2.9 由检验输出反推标准误"
+            - file: Exercises/translations_zh/chapter02/exercise-2-10.md
+              title: "2.10 输出中的符号矛盾"
+            - file: Exercises/translations_zh/chapter02/exercise-2-11.md
+              title: "2.11 双侧 t 检验的 P 值上界"
+            - file: Exercises/translations_zh/chapter02/exercise-2-12.md
+              title: "2.12 另一双侧 t 检验的上界"
+            - file: Exercises/translations_zh/chapter02/exercise-2-13.md
+              title: "2.13 单样本右侧 t 检验"
+            - file: Exercises/translations_zh/chapter02/exercise-2-14.md
+              title: "2.14 单样本双侧 t 检验"
+            - file: Exercises/translations_zh/chapter02/exercise-2-15.md
+              title: "2.15 补全单样本 t 输出"
+            - file: Exercises/translations_zh/chapter02/exercise-2-16.md
+              title: "2.16 单侧均值下限"
+            - file: Exercises/translations_zh/chapter02/exercise-2-17.md
+              title: "2.17 两样本 t 输出的解释"
+            - file: Exercises/translations_zh/chapter02/exercise-2-18.md
+              title: "2.18 纤维断裂强度"
+            - file: Exercises/translations_zh/chapter02/exercise-2-19.md
+              title: "2.19 洗涤剂黏度"
+            - file: Exercises/translations_zh/chapter02/exercise-2-20.md
+              title: "2.20 钢轴直径"
+            - file: Exercises/translations_zh/chapter02/exercise-2-21.md
+              title: "2.21 已知方差的区间样本量"
+            - file: Exercises/translations_zh/chapter02/exercise-2-22.md
+              title: "2.22 碳酸饮料货架寿命"
+            - file: Exercises/translations_zh/chapter02/exercise-2-23.md
+              title: "2.23 货架寿命的正态性"
+            - file: Exercises/translations_zh/chapter02/exercise-2-24.md
+              title: "2.24 仪器维修时间"
+            - file: Exercises/translations_zh/chapter02/exercise-2-25.md
+              title: "2.25 维修时间的分布"
+            - file: Exercises/translations_zh/chapter02/exercise-2-26.md
+              title: "2.26 两台灌装机：已知方差"
+            - file: Exercises/translations_zh/chapter02/exercise-2-27.md
+              title: "2.27 两种塑料的强度门槛"
+            - file: Exercises/translations_zh/chapter02/exercise-2-28.md
+              title: "2.28 照明信号弹燃烧时间"
+            - file: Exercises/translations_zh/chapter02/exercise-2-29.md
+              title: "2.29 刻蚀气体流量"
+            - file: Exercises/translations_zh/chapter02/exercise-2-30.md
+              title: "2.30 过滤装置与杂质"
+            - file: Exercises/translations_zh/chapter02/exercise-2-31.md
+              title: "2.31 光刻胶烘烤温度"
+            - file: Exercises/translations_zh/chapter02/exercise-2-32.md
+              title: "2.32 冷却时间与手机壳外观"
+            - file: Exercises/translations_zh/chapter02/exercise-2-33.md
+              title: "2.33 刻蚀均匀性的方差"
+            - file: Exercises/translations_zh/chapter02/exercise-2-34.md
+              title: "2.34 两种卡尺的配对比较"
+            - file: Exercises/translations_zh/chapter02/exercise-2-35.md
+              title: "2.35 双胞胎出生顺序与得分"
+            - file: Exercises/translations_zh/chapter02/exercise-2-36.md
+              title: "2.36 钢板梁强度预测方法"
+            - file: Exercises/translations_zh/chapter02/exercise-2-37.md
+              title: "2.37 ABS 管材的负载变形温度"
+            - file: Exercises/translations_zh/chapter02/exercise-2-38.md
+              title: "2.38 温度差至少 3°F？"
+            - file: Exercises/translations_zh/chapter02/exercise-2-39.md
+              title: "2.39 两种刻蚀液"
+            - file: Exercises/translations_zh/chapter02/exercise-2-40.md
+              title: "2.40 均值倍数关系的检验统计量"
+            - file: Exercises/translations_zh/chapter02/exercise-2-41.md
+              title: "2.41 单胺氧化酶水平"
+            - file: Exercises/translations_zh/chapter02/exercise-2-42.md
+              title: "2.42 最优样本量分配"
+            - file: Exercises/translations_zh/chapter02/exercise-2-43.md
+              title: "2.43 最优分配能缩短多少区间"
+            - file: Exercises/translations_zh/chapter02/exercise-2-44.md
+              title: "2.44 正态总体方差区间的推导"
+            - file: Exercises/translations_zh/chapter02/exercise-2-45.md
+              title: "2.45 两总体方差比区间"
+            - file: Exercises/translations_zh/chapter02/exercise-2-46.md
+              title: "2.46 方差不等时的均值差区间"
+            - file: Exercises/translations_zh/chapter02/exercise-2-47.md
+              title: "2.47 构造“配对显著、独立样本不显著”的数据"
+            - file: Exercises/translations_zh/chapter02/exercise-2-48.md
+              title: "2.48 信号弹试验的功效"
+            - file: Exercises/translations_zh/chapter02/exercise-2-49.md
+              title: "2.49 灌装机：方差未知但相等"
+            - file: Exercises/translations_zh/chapter02/exercise-2-50.md
+              title: "2.50 灌装差异的功效"
+            - file: Exercises/translations_zh/chapter02/exercise-2-51.md
+              title: "2.51 不显著结果与置信区间"
+            - file: Exercises/translations_zh/chapter02/exercise-2-52.md
+              title: "2.52 每组只有 5 个观测"
+            - file: Exercises/translations_zh/chapter02/exercise-2-53.md
+              title: "2.53 大样本与实际意义"
+            - file: Exercises/translations_zh/chapter02/exercise-2-54.md
+              title: "2.54 样本量与区间长度"
+            - file: Exercises/translations_zh/chapter02/exercise-2-55.md
+              title: "2.55 t 检验一定要求严格正态吗"
+            - file: Exercises/translations_zh/chapter02/exercise-2-56.md
+              title: "2.56 如何从生产线随机抽样"
+            - file: Exercises/translations_zh/chapter02/exercise-2-57.md
+              title: "2.57 方差不等时比较均值"
+            - file: Exercises/translations_zh/chapter02/exercise-2-58.md
+              title: "2.58 显著性水平必须是 0.05 吗"
+            - file: Exercises/translations_zh/chapter02/exercise-2-59.md
+              title: "2.59 怎样才算足够的功效"
+            - file: Exercises/translations_zh/chapter02/exercise-2-60.md
+              title: "2.60 研发早期应更关注哪类错误"
+        - file: Exercises/translations_zh/chapter03.md
+          title: 第 3 章　单因子试验与方差分析习题
+          children:
+            - file: Exercises/translations_zh/chapter03/exercise-3-1.md
+              title: "3.1 四水平试验的 P 值"
+            - file: Exercises/translations_zh/chapter03/exercise-3-2.md
+              title: "3.2 六水平试验的 P 值"
+            - file: Exercises/translations_zh/chapter03/exercise-3-3.md
+              title: "3.3 五水平完全随机设计"
+            - file: Exercises/translations_zh/chapter03/exercise-3-4.md
+              title: "3.4 三水平完全随机设计"
+            - file: Exercises/translations_zh/chapter03/exercise-3-5.md
+              title: "3.5 误差均方估计什么"
+            - file: Exercises/translations_zh/chapter03/exercise-3-6.md
+              title: "3.6 必须先做残差正态性检验吗"
+            - file: Exercises/translations_zh/chapter03/exercise-3-7.md
+              title: "3.7 补全 ANOVA 表（一）"
+            - file: Exercises/translations_zh/chapter03/exercise-3-8.md
+              title: "3.8 补全 ANOVA 表（二）"
+            - file: Exercises/translations_zh/chapter03/exercise-3-9.md
+              title: "3.9 巧克力与抑郁：观察研究还是试验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-10.md
+              title: "3.10 脉冲电磁场与骨密度损失"
+            - file: Exercises/translations_zh/chapter03/exercise-3-11.md
+              title: "3.11 水泥混合方法"
+            - file: Exercises/translations_zh/chapter03/exercise-3-12.md
+              title: "3.12 Tukey 与 Fisher LSD 的区别"
+            - file: Exercises/translations_zh/chapter03/exercise-3-13.md
+              title: "3.13 混合方法的均值与均值差区间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-14.md
+              title: "3.14 棉含量与纤维强度"
+            - file: Exercises/translations_zh/chapter03/exercise-3-15.md
+              title: "3.15 与 30% 对照比较：Dunnett 检验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-16.md
+              title: "3.16 剂量与药物生物活性"
+            - file: Exercises/translations_zh/chapter03/exercise-3-17.md
+              title: "3.17 车型与租期"
+            - file: Exercises/translations_zh/chapter03/exercise-3-18.md
+              title: "3.18 季节与高尔夫成绩"
+            - file: Exercises/translations_zh/chapter03/exercise-3-19.md
+              title: "3.19 募捐方式"
+            - file: Exercises/translations_zh/chapter03/exercise-3-20.md
+              title: "3.20 烧制温度与砖密度"
+            - file: Exercises/translations_zh/chapter03/exercise-3-21.md
+              title: "3.21 不等样本量的 Tukey 比较"
+            - file: Exercises/translations_zh/chapter03/exercise-3-22.md
+              title: "3.22 涂层与显像管导电性"
+            - file: Exercises/translations_zh/chapter03/exercise-3-23.md
+              title: "3.23 涂层试验的残差"
+            - file: Exercises/translations_zh/chapter03/exercise-3-24.md
+              title: "3.24 混凝土插捣次数"
+            - file: Exercises/translations_zh/chapter03/exercise-3-25.md
+              title: "3.25 淋浴喷孔与氡释放"
+            - file: Exercises/translations_zh/chapter03/exercise-3-26.md
+              title: "3.26 自动阀门电路响应时间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-27.md
+              title: "3.27 绝缘液寿命"
+            - file: Exercises/translations_zh/chapter03/exercise-3-28.md
+              title: "3.28 数字电路噪声"
+            - file: Exercises/translations_zh/chapter03/exercise-3-29.md
+              title: "3.29 化学分析员的测定结果"
+            - file: Exercises/translations_zh/chapter03/exercise-3-30.md
+              title: "3.30 电池品牌寿命"
+            - file: Exercises/translations_zh/chapter03/exercise-3-31.md
+              title: "3.31 催化剂与组分浓度"
+            - file: Exercises/translations_zh/chapter03/exercise-3-32.md
+              title: "3.32 五种绝缘材料失效时间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-33.md
+              title: "3.33 清洗方法与硅片粒子数"
+            - file: Exercises/translations_zh/chapter03/exercise-3-34.md
+              title: "3.34 原料批次中的钙含量"
+            - file: Exercises/translations_zh/chapter03/exercise-3-35.md
+              title: "3.35 随机选择的加热炉"
+            - file: Exercises/translations_zh/chapter03/exercise-3-36.md
+              title: "3.36 反应器晶圆位置"
+            - file: Exercises/translations_zh/chapter03/exercise-3-37.md
+              title: "3.37 位置变异的占比与降低空间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-38.md
+              title: "3.38 由平方和估计误差与组间变异"
+            - file: Exercises/translations_zh/chapter03/exercise-3-39.md
+              title: "3.39 六水平平方和分析"
+            - file: Exercises/translations_zh/chapter03/exercise-3-40.md
+              title: "3.40 四水平试验的组内相关区间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-41.md
+              title: "3.41 六水平试验的组内相关区间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-42.md
+              title: "3.42 漂白化学品与纸浆亮度"
+            - file: Exercises/translations_zh/chapter03/exercise-3-43.md
+              title: "3.43 误差方差占比的区间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-44.md
+              title: "3.44 合并 t 检验与单因子 ANOVA 等价"
+            - file: Exercises/translations_zh/chapter03/exercise-3-45.md
+              title: "3.45 线性组合的方差"
+            - file: Exercises/translations_zh/chapter03/exercise-3-46.md
+              title: "3.46 正交对比分解处理平方和"
+            - file: Exercises/translations_zh/chapter03/exercise-3-47.md
+              title: "3.47 电池寿命的 Bartlett 检验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-48.md
+              title: "3.48 改进 Levene 检验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-49.md
+              title: "3.49 检出电路响应时间差的样本量"
+            - file: Exercises/translations_zh/chapter03/exercise-3-50.md
+              title: "3.50 检出电池寿命差的样本量"
+            - file: Exercises/translations_zh/chapter03/exercise-3-51.md
+              title: "3.51 均值差区间精度与电池样本量"
+            - file: Exercises/translations_zh/chapter03/exercise-3-52.md
+              title: "3.52 已知四个总体均值的功效规划"
+            - file: Exercises/translations_zh/chapter03/exercise-3-53.md
+              title: "3.53 方差规划值变化"
+            - file: Exercises/translations_zh/chapter03/exercise-3-54.md
+              title: "3.54 铝冶炼：平均槽电压"
+            - file: Exercises/translations_zh/chapter03/exercise-3-55.md
+              title: "3.55 铝冶炼：槽噪声"
+            - file: Exercises/translations_zh/chapter03/exercise-3-56.md
+              title: "3.56 CNC 进给速度与尺寸波动"
+            - file: Exercises/translations_zh/chapter03/exercise-3-57.md
+              title: "3.57 正规方程、约束与可估函数"
+            - file: Exercises/translations_zh/chapter03/exercise-3-58.md
+              title: "3.58 一般回归显著性检验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-59.md
+              title: "3.59 绝缘液的 Kruskal–Wallis 检验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-60.md
+              title: "3.60 电路噪声的 Kruskal–Wallis 检验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-61.md
+              title: "3.61 一个录入错误的影响"
+            - file: Exercises/translations_zh/chapter03/exercise-3-62.md
+              title: "3.62 织布机产量的随机效应"
+            - file: Exercises/translations_zh/chapter03/exercise-3-63.md
+              title: "3.63 正态性在 ANOVA 中“极端重要”吗"
+            - file: Exercises/translations_zh/chapter03/exercise-3-64.md
+              title: "3.64 定量与定性因子的平方和"
+            - file: Exercises/translations_zh/chapter03/exercise-3-65.md
+              title: "3.65 饱和多项式与组别 ANOVA"
+            - file: Exercises/translations_zh/chapter03/exercise-3-66.md
+              title: "3.66 LSD 是非常保守的方法吗"
+            - file: Exercises/translations_zh/chapter03/exercise-3-67.md
+              title: "3.67 REML 与 ANOVA 方差分量估计"
+            - file: Exercises/translations_zh/chapter03/exercise-3-68.md
+              title: "3.68 REML 与置信区间"
+            - file: Exercises/translations_zh/chapter03/exercise-3-69.md
+              title: "3.69 Tukey 是否专门用于对照比较"
+            - file: Exercises/translations_zh/chapter03/exercise-3-70.md
+              title: "3.70 从部分输出还原试验"
+            - file: Exercises/translations_zh/chapter03/exercise-3-71.md
+              title: "3.71 单个观测的标准差估计"
     - file: Chapter 01/translations_zh/00_Introduction_zh.md
       title: 第 1 章 引言
       children:

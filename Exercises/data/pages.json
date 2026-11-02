@@ -1,0 +1,717 @@
+[
+  {
+    "number": "1.1",
+    "title": "爆米花中未爆开玉米粒的比例",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-1.md"
+  },
+  {
+    "number": "1.2",
+    "title": "米饭烹煮试验",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-2.md"
+  },
+  {
+    "number": "1.3",
+    "title": "花卉生长试验",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-3.md"
+  },
+  {
+    "number": "1.4",
+    "title": "自选试验",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-4.md"
+  },
+  {
+    "number": "1.5",
+    "title": "Fisher 与洛桑试验站",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-5.md"
+  },
+  {
+    "number": "1.6",
+    "title": "改进商业网站",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-6.md"
+  },
+  {
+    "number": "1.7",
+    "title": "汽车燃油经济性",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-7.md"
+  },
+  {
+    "number": "1.8",
+    "title": "独立重复与重复测量",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-8.md"
+  },
+  {
+    "number": "1.9",
+    "title": "随机化的重要性",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-9.md"
+  },
+  {
+    "number": "1.10",
+    "title": "一次大试验还是序贯试验",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-10.md"
+  },
+  {
+    "number": "1.11",
+    "title": "信用卡营销试验",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-11.md"
+  },
+  {
+    "number": "1.12",
+    "title": "电商网站点击试验",
+    "file": "Exercises/translations_zh/chapter01/exercise-1-12.md"
+  },
+  {
+    "number": "2.1",
+    "title": "补全样本统计量",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-1.md"
+  },
+  {
+    "number": "2.2",
+    "title": "由总和与标准误求均值和标准差",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-2.md"
+  },
+  {
+    "number": "2.3",
+    "title": "双侧 Z 检验的 P 值",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-3.md"
+  },
+  {
+    "number": "2.4",
+    "title": "右侧 Z 检验的 P 值",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-4.md"
+  },
+  {
+    "number": "2.5",
+    "title": "单样本 Z 输出",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-5.md"
+  },
+  {
+    "number": "2.6",
+    "title": "等方差两样本双侧 t 检验",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-6.md"
+  },
+  {
+    "number": "2.7",
+    "title": "等方差两样本右侧 t 检验",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-7.md"
+  },
+  {
+    "number": "2.8",
+    "title": "正态性与均值为 10 的检验",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-8.md"
+  },
+  {
+    "number": "2.9",
+    "title": "由检验输出反推标准误",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-9.md"
+  },
+  {
+    "number": "2.10",
+    "title": "输出中的符号矛盾",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-10.md"
+  },
+  {
+    "number": "2.11",
+    "title": "双侧 t 检验的 P 值上界",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-11.md"
+  },
+  {
+    "number": "2.12",
+    "title": "另一双侧 t 检验的上界",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-12.md"
+  },
+  {
+    "number": "2.13",
+    "title": "单样本右侧 t 检验",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-13.md"
+  },
+  {
+    "number": "2.14",
+    "title": "单样本双侧 t 检验",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-14.md"
+  },
+  {
+    "number": "2.15",
+    "title": "补全单样本 t 输出",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-15.md"
+  },
+  {
+    "number": "2.16",
+    "title": "单侧均值下限",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-16.md"
+  },
+  {
+    "number": "2.17",
+    "title": "两样本 t 输出的解释",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-17.md"
+  },
+  {
+    "number": "2.18",
+    "title": "纤维断裂强度",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-18.md"
+  },
+  {
+    "number": "2.19",
+    "title": "洗涤剂黏度",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-19.md"
+  },
+  {
+    "number": "2.20",
+    "title": "钢轴直径",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-20.md"
+  },
+  {
+    "number": "2.21",
+    "title": "已知方差的区间样本量",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-21.md"
+  },
+  {
+    "number": "2.22",
+    "title": "碳酸饮料货架寿命",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-22.md"
+  },
+  {
+    "number": "2.23",
+    "title": "货架寿命的正态性",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-23.md"
+  },
+  {
+    "number": "2.24",
+    "title": "仪器维修时间",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-24.md"
+  },
+  {
+    "number": "2.25",
+    "title": "维修时间的分布",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-25.md"
+  },
+  {
+    "number": "2.26",
+    "title": "两台灌装机：已知方差",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-26.md"
+  },
+  {
+    "number": "2.27",
+    "title": "两种塑料的强度门槛",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-27.md"
+  },
+  {
+    "number": "2.28",
+    "title": "照明信号弹燃烧时间",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-28.md"
+  },
+  {
+    "number": "2.29",
+    "title": "刻蚀气体流量",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-29.md"
+  },
+  {
+    "number": "2.30",
+    "title": "过滤装置与杂质",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-30.md"
+  },
+  {
+    "number": "2.31",
+    "title": "光刻胶烘烤温度",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-31.md"
+  },
+  {
+    "number": "2.32",
+    "title": "冷却时间与手机壳外观",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-32.md"
+  },
+  {
+    "number": "2.33",
+    "title": "刻蚀均匀性的方差",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-33.md"
+  },
+  {
+    "number": "2.34",
+    "title": "两种卡尺的配对比较",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-34.md"
+  },
+  {
+    "number": "2.35",
+    "title": "双胞胎出生顺序与得分",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-35.md"
+  },
+  {
+    "number": "2.36",
+    "title": "钢板梁强度预测方法",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-36.md"
+  },
+  {
+    "number": "2.37",
+    "title": "ABS 管材的负载变形温度",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-37.md"
+  },
+  {
+    "number": "2.38",
+    "title": "温度差至少 3°F？",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-38.md"
+  },
+  {
+    "number": "2.39",
+    "title": "两种刻蚀液",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-39.md"
+  },
+  {
+    "number": "2.40",
+    "title": "均值倍数关系的检验统计量",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-40.md"
+  },
+  {
+    "number": "2.41",
+    "title": "单胺氧化酶水平",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-41.md"
+  },
+  {
+    "number": "2.42",
+    "title": "最优样本量分配",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-42.md"
+  },
+  {
+    "number": "2.43",
+    "title": "最优分配能缩短多少区间",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-43.md"
+  },
+  {
+    "number": "2.44",
+    "title": "正态总体方差区间的推导",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-44.md"
+  },
+  {
+    "number": "2.45",
+    "title": "两总体方差比区间",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-45.md"
+  },
+  {
+    "number": "2.46",
+    "title": "方差不等时的均值差区间",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-46.md"
+  },
+  {
+    "number": "2.47",
+    "title": "构造“配对显著、独立样本不显著”的数据",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-47.md"
+  },
+  {
+    "number": "2.48",
+    "title": "信号弹试验的功效",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-48.md"
+  },
+  {
+    "number": "2.49",
+    "title": "灌装机：方差未知但相等",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-49.md"
+  },
+  {
+    "number": "2.50",
+    "title": "灌装差异的功效",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-50.md"
+  },
+  {
+    "number": "2.51",
+    "title": "不显著结果与置信区间",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-51.md"
+  },
+  {
+    "number": "2.52",
+    "title": "每组只有 5 个观测",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-52.md"
+  },
+  {
+    "number": "2.53",
+    "title": "大样本与实际意义",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-53.md"
+  },
+  {
+    "number": "2.54",
+    "title": "样本量与区间长度",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-54.md"
+  },
+  {
+    "number": "2.55",
+    "title": "t 检验一定要求严格正态吗",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-55.md"
+  },
+  {
+    "number": "2.56",
+    "title": "如何从生产线随机抽样",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-56.md"
+  },
+  {
+    "number": "2.57",
+    "title": "方差不等时比较均值",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-57.md"
+  },
+  {
+    "number": "2.58",
+    "title": "显著性水平必须是 0.05 吗",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-58.md"
+  },
+  {
+    "number": "2.59",
+    "title": "怎样才算足够的功效",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-59.md"
+  },
+  {
+    "number": "2.60",
+    "title": "研发早期应更关注哪类错误",
+    "file": "Exercises/translations_zh/chapter02/exercise-2-60.md"
+  },
+  {
+    "number": "3.1",
+    "title": "四水平试验的 P 值",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-1.md"
+  },
+  {
+    "number": "3.2",
+    "title": "六水平试验的 P 值",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-2.md"
+  },
+  {
+    "number": "3.3",
+    "title": "五水平完全随机设计",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-3.md"
+  },
+  {
+    "number": "3.4",
+    "title": "三水平完全随机设计",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-4.md"
+  },
+  {
+    "number": "3.5",
+    "title": "误差均方估计什么",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-5.md"
+  },
+  {
+    "number": "3.6",
+    "title": "必须先做残差正态性检验吗",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-6.md"
+  },
+  {
+    "number": "3.7",
+    "title": "补全 ANOVA 表（一）",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-7.md"
+  },
+  {
+    "number": "3.8",
+    "title": "补全 ANOVA 表（二）",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-8.md"
+  },
+  {
+    "number": "3.9",
+    "title": "巧克力与抑郁：观察研究还是试验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-9.md"
+  },
+  {
+    "number": "3.10",
+    "title": "脉冲电磁场与骨密度损失",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-10.md"
+  },
+  {
+    "number": "3.11",
+    "title": "水泥混合方法",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-11.md"
+  },
+  {
+    "number": "3.12",
+    "title": "Tukey 与 Fisher LSD 的区别",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-12.md"
+  },
+  {
+    "number": "3.13",
+    "title": "混合方法的均值与均值差区间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-13.md"
+  },
+  {
+    "number": "3.14",
+    "title": "棉含量与纤维强度",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-14.md"
+  },
+  {
+    "number": "3.15",
+    "title": "与 30% 对照比较：Dunnett 检验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-15.md"
+  },
+  {
+    "number": "3.16",
+    "title": "剂量与药物生物活性",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-16.md"
+  },
+  {
+    "number": "3.17",
+    "title": "车型与租期",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-17.md"
+  },
+  {
+    "number": "3.18",
+    "title": "季节与高尔夫成绩",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-18.md"
+  },
+  {
+    "number": "3.19",
+    "title": "募捐方式",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-19.md"
+  },
+  {
+    "number": "3.20",
+    "title": "烧制温度与砖密度",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-20.md"
+  },
+  {
+    "number": "3.21",
+    "title": "不等样本量的 Tukey 比较",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-21.md"
+  },
+  {
+    "number": "3.22",
+    "title": "涂层与显像管导电性",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-22.md"
+  },
+  {
+    "number": "3.23",
+    "title": "涂层试验的残差",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-23.md"
+  },
+  {
+    "number": "3.24",
+    "title": "混凝土插捣次数",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-24.md"
+  },
+  {
+    "number": "3.25",
+    "title": "淋浴喷孔与氡释放",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-25.md"
+  },
+  {
+    "number": "3.26",
+    "title": "自动阀门电路响应时间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-26.md"
+  },
+  {
+    "number": "3.27",
+    "title": "绝缘液寿命",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-27.md"
+  },
+  {
+    "number": "3.28",
+    "title": "数字电路噪声",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-28.md"
+  },
+  {
+    "number": "3.29",
+    "title": "化学分析员的测定结果",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-29.md"
+  },
+  {
+    "number": "3.30",
+    "title": "电池品牌寿命",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-30.md"
+  },
+  {
+    "number": "3.31",
+    "title": "催化剂与组分浓度",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-31.md"
+  },
+  {
+    "number": "3.32",
+    "title": "五种绝缘材料失效时间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-32.md"
+  },
+  {
+    "number": "3.33",
+    "title": "清洗方法与硅片粒子数",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-33.md"
+  },
+  {
+    "number": "3.34",
+    "title": "原料批次中的钙含量",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-34.md"
+  },
+  {
+    "number": "3.35",
+    "title": "随机选择的加热炉",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-35.md"
+  },
+  {
+    "number": "3.36",
+    "title": "反应器晶圆位置",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-36.md"
+  },
+  {
+    "number": "3.37",
+    "title": "位置变异的占比与降低空间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-37.md"
+  },
+  {
+    "number": "3.38",
+    "title": "由平方和估计误差与组间变异",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-38.md"
+  },
+  {
+    "number": "3.39",
+    "title": "六水平平方和分析",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-39.md"
+  },
+  {
+    "number": "3.40",
+    "title": "四水平试验的组内相关区间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-40.md"
+  },
+  {
+    "number": "3.41",
+    "title": "六水平试验的组内相关区间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-41.md"
+  },
+  {
+    "number": "3.42",
+    "title": "漂白化学品与纸浆亮度",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-42.md"
+  },
+  {
+    "number": "3.43",
+    "title": "误差方差占比的区间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-43.md"
+  },
+  {
+    "number": "3.44",
+    "title": "合并 t 检验与单因子 ANOVA 等价",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-44.md"
+  },
+  {
+    "number": "3.45",
+    "title": "线性组合的方差",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-45.md"
+  },
+  {
+    "number": "3.46",
+    "title": "正交对比分解处理平方和",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-46.md"
+  },
+  {
+    "number": "3.47",
+    "title": "电池寿命的 Bartlett 检验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-47.md"
+  },
+  {
+    "number": "3.48",
+    "title": "改进 Levene 检验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-48.md"
+  },
+  {
+    "number": "3.49",
+    "title": "检出电路响应时间差的样本量",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-49.md"
+  },
+  {
+    "number": "3.50",
+    "title": "检出电池寿命差的样本量",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-50.md"
+  },
+  {
+    "number": "3.51",
+    "title": "均值差区间精度与电池样本量",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-51.md"
+  },
+  {
+    "number": "3.52",
+    "title": "已知四个总体均值的功效规划",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-52.md"
+  },
+  {
+    "number": "3.53",
+    "title": "方差规划值变化",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-53.md"
+  },
+  {
+    "number": "3.54",
+    "title": "铝冶炼：平均槽电压",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-54.md"
+  },
+  {
+    "number": "3.55",
+    "title": "铝冶炼：槽噪声",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-55.md"
+  },
+  {
+    "number": "3.56",
+    "title": "CNC 进给速度与尺寸波动",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-56.md"
+  },
+  {
+    "number": "3.57",
+    "title": "正规方程、约束与可估函数",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-57.md"
+  },
+  {
+    "number": "3.58",
+    "title": "一般回归显著性检验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-58.md"
+  },
+  {
+    "number": "3.59",
+    "title": "绝缘液的 Kruskal–Wallis 检验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-59.md"
+  },
+  {
+    "number": "3.60",
+    "title": "电路噪声的 Kruskal–Wallis 检验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-60.md"
+  },
+  {
+    "number": "3.61",
+    "title": "一个录入错误的影响",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-61.md"
+  },
+  {
+    "number": "3.62",
+    "title": "织布机产量的随机效应",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-62.md"
+  },
+  {
+    "number": "3.63",
+    "title": "正态性在 ANOVA 中“极端重要”吗",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-63.md"
+  },
+  {
+    "number": "3.64",
+    "title": "定量与定性因子的平方和",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-64.md"
+  },
+  {
+    "number": "3.65",
+    "title": "饱和多项式与组别 ANOVA",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-65.md"
+  },
+  {
+    "number": "3.66",
+    "title": "LSD 是非常保守的方法吗",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-66.md"
+  },
+  {
+    "number": "3.67",
+    "title": "REML 与 ANOVA 方差分量估计",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-67.md"
+  },
+  {
+    "number": "3.68",
+    "title": "REML 与置信区间",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-68.md"
+  },
+  {
+    "number": "3.69",
+    "title": "Tukey 是否专门用于对照比较",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-69.md"
+  },
+  {
+    "number": "3.70",
+    "title": "从部分输出还原试验",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-70.md"
+  },
+  {
+    "number": "3.71",
+    "title": "单个观测的标准差估计",
+    "file": "Exercises/translations_zh/chapter03/exercise-3-71.md"
+  }
+]

@@ -10,6 +10,7 @@ project:
     equations: false
   static_files:
     - LXGWWenKai-Regular.ttf
+    - book/static/katex
   keywords:
     - 试验设计
     - 统计分析
@@ -22,6 +23,8 @@ project:
     - .venv-book/**
     - MinerU-Skill/**
     - _tools/**
+    - _out/**
+    - Exercises/*.pdf
     - "*.pdf"
     - "Chapter 01/01_Introduction.md"
     - "Chapter 01/sections/**"
@@ -62,6 +65,8 @@ site:
     style: book/static/book.css
     logo_text: 试验设计与分析 中文翻译
   nav:
+    - title: 习题与答案
+      url: /exercises
     - title: 翻译进度
       url: /book/progress
     - title: 关于本项目

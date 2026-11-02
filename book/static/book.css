@@ -1,3 +1,6 @@
+/* Keep equation rendering available when the theme's CDN cannot be reached. */
+@import url("./katex/katex.min.css");
+
 @font-face {
   font-family: "LXGW WenKai";
   src: url("./LXGWWenKai-Regular.ttf") format("truetype");

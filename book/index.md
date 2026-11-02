@@ -18,6 +18,8 @@ site:
 
 ## 已收录章节
 
+新增[习题与答案](../Exercises/index.md)：按第 9 版编号收录前 3 章全部 143 题，每题独立成页，提供完整中文题目、数据与答案解析。
+
 - [第 1 章　引言](../Chapter%2001/translations_zh/00_Introduction_zh.md)
 - [第 2 章　简单比较试验](../Chapter%2002/translations_zh/00_Simple_Comparative_Experiments_zh.md)
 - [第 3 章　单因子试验：方差分析](../Chapter%2003/translations_zh/00_Experiments_with_a_Single_Factor_-_The_Analysis_of_Variance_zh.md)

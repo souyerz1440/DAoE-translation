@@ -4,6 +4,7 @@ node_modules/
 .myst/
 .editor-backups/
 __pycache__/
+/_out/exercises/
 start.bat
 *.ps1
 

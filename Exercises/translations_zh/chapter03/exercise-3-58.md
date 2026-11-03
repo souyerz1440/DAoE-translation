@@ -32,6 +32,20 @@ $$F_0=\frac{[SS_E(R)-SS_E(F)]/(4-1)}{SS_E(F)/(20-4)}.$$
 
 约简残差平方和就是总平方和，全模型残差平方和就是组内平方和；差值是处理平方和，故与单因子 ANOVA 完全一致。
 
+**模型与模型假设（固定效应）**：$y_{ij}=\mu_i+\epsilon_{ij}=\mu+\tau_i+\epsilon_{ij}$，$i=1,\ldots,a$，$j=1,\ldots,n_i$；$\epsilon_{ij}\overset{\mathrm{iid}}\sim N(0,\sigma^2)$。误差独立、正态且同方差，处理分配及抽样符合题意；不平衡设计使用实际 $n_i$。取 $\sum_i n_i\tau_i=0$ 识别参数；平衡时等价于 $\sum_i\tau_i=0$。
+
+**原假设和备择假设**：$H_0:\mu_1=\cdots=\mu_a$；$H_1$：至少一个总体均值不同。
+
+**平方和公式与检验统计量**：令 $N=\sum_i n_i$，$\bar y_i=\sum_jy_{ij}/n_i$，$\bar y_{\cdot\cdot}=\sum_i\sum_jy_{ij}/N$。
+
+$$SS_A=\sum_i n_i(\bar y_i-\bar y_{\cdot\cdot})^2,\qquad SS_E=\sum_i\sum_j(y_{ij}-\bar y_i)^2,$$
+$$SS_T=\sum_i\sum_j(y_{ij}-\bar y_{\cdot\cdot})^2=SS_A+SS_E,$$
+$$MS_A=\frac{SS_A}{a-1},\quad MS_E=\frac{SS_E}{N-a},\quad F_0=\frac{MS_A}{MS_E}\overset{H_0}{\sim}F_{a-1,N-a}.$$
+
+当 $F_0>F_{1-\alpha,a-1,N-a}$ 时拒绝 $H_0$，$P=P(F_{a-1,N-a}\ge F_0)$。本文分位数均为**下侧累积概率分位数**。
+
+**点估计量**：$\hat\mu_i=\bar y_i$，$\hat\sigma^2=MS_E$；各组样本方差为 $s_i^2=\sum_j(y_{ij}-\bar y_i)^2/(n_i-1)$。以下为 ANOVA Table 与计算结果。
+
 | 来源 | 自由度 | 平方和 | 均方 | $F$ | $P$ 值 |
 | --- | --- | --- | --- | --- | --- |
 | 处理 | 3 | 66870.5 | 22290.2 | 66.7971 | 2.88287e-09 |
@@ -44,8 +58,6 @@ $$F_0=\frac{[SS_E(R)-SS_E(F)]/(4-1)}{SS_E(F)/(20-4)}.$$
 | 2 | 5 | 587.4 | 16.7422 |
 | 3 | 5 | 625.4 | 20.5256 |
 | 4 | 5 | 707 | 15.248 |
-
-![习题 3.58：观测值、正态概率图与残差诊断（raw）](../../images/ch3-58-raw.png)
 
 得到 $F_0=66.7971$。原答案一处将处理均方写为 22290.8，按实际平方和除以 3 应为 22290.1833。
 

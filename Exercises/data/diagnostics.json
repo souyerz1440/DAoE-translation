@@ -1,0 +1,370 @@
+{
+  "2.8|raw": {
+    "exercise": "2.8",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 10
+  },
+  "2.22|raw": {
+    "exercise": "2.22",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 10
+  },
+  "2.24|raw": {
+    "exercise": "2.24",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 16
+  },
+  "2.28|raw": {
+    "exercise": "2.28",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "2.31|raw": {
+    "exercise": "2.31",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 16
+  },
+  "2.32|raw": {
+    "exercise": "2.32",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 40
+  },
+  "2.33|raw": {
+    "exercise": "2.33",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "2.35|paired": {
+    "exercise": "2.35",
+    "scale": "paired",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "paired_difference - mean_difference",
+    "n": 10
+  },
+  "2.36|paired": {
+    "exercise": "2.36",
+    "scale": "paired",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "paired_difference - mean_difference",
+    "n": 9
+  },
+  "2.37|raw": {
+    "exercise": "2.37",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 24
+  },
+  "2.39|raw": {
+    "exercise": "2.39",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 16
+  },
+  "3.10|raw": {
+    "exercise": "3.10",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 80
+  },
+  "3.11|raw": {
+    "exercise": "3.11",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "y_ij - group_mean",
+    "n": 16
+  },
+  "3.14|raw": {
+    "exercise": "3.14",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 25
+  },
+  "3.16|raw": {
+    "exercise": "3.16",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 12
+  },
+  "3.17|raw": {
+    "exercise": "3.17",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 40
+  },
+  "3.18|raw": {
+    "exercise": "3.18",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 25
+  },
+  "3.19|raw": {
+    "exercise": "3.19",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 24
+  },
+  "3.20|raw": {
+    "exercise": "3.20",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 18
+  },
+  "3.22|raw": {
+    "exercise": "3.22",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 16
+  },
+  "3.24|raw": {
+    "exercise": "3.24",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 12
+  },
+  "3.25|raw": {
+    "exercise": "3.25",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 24
+  },
+  "3.26|raw": {
+    "exercise": "3.26",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 15
+  },
+  "3.27|raw": {
+    "exercise": "3.27",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 24
+  },
+  "3.28|raw": {
+    "exercise": "3.28",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "3.29|raw": {
+    "exercise": "3.29",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 12
+  },
+  "3.30|raw": {
+    "exercise": "3.30",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 15
+  },
+  "3.31|raw": {
+    "exercise": "3.31",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 16
+  },
+  "3.32|raw": {
+    "exercise": "3.32",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "3.32|log": {
+    "exercise": "3.32",
+    "scale": "log",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "3.33|raw": {
+    "exercise": "3.33",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 15
+  },
+  "3.33|sqrt": {
+    "exercise": "3.33",
+    "scale": "sqrt",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 15
+  },
+  "3.34|raw": {
+    "exercise": "3.34",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 25
+  },
+  "3.35|raw": {
+    "exercise": "3.35",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": true,
+    "sequence_basis": "题干明确的炉内连续加热次序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 15
+  },
+  "3.36|raw": {
+    "exercise": "3.36",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 12
+  },
+  "3.42|raw": {
+    "exercise": "3.42",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "3.54|raw": {
+    "exercise": "3.54",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 24
+  },
+  "3.55|neglog": {
+    "exercise": "3.55",
+    "scale": "neglog",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 24
+  },
+  "3.56|raw": {
+    "exercise": "3.56",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "3.56|log": {
+    "exercise": "3.56",
+    "scale": "log",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 20
+  },
+  "3.62|raw": {
+    "exercise": "3.62",
+    "scale": "raw",
+    "actual_run_order_available": false,
+    "within_group_order_available": false,
+    "sequence_basis": "原表组内记录顺序",
+    "residual": "transformed_y_ij - transformed_group_mean",
+    "n": 25
+  }
+}

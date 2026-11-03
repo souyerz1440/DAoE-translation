@@ -17,11 +17,17 @@ description: 第9版习题3.43的完整中文题目、数据与答案解析
 
 ## 答案与解析
 
-该比例等于 $1-\rho$。先按 3.40 求组内相关 $\rho$ 的区间 $[L_\rho,U_\rho]$，则所求区间为
+在平衡随机效应模型中，$y_{ij}=\mu+u_i+\epsilon_{ij}$，$u_i\sim N(0,\sigma_\tau^2)$、$\epsilon_{ij}\sim N(0,\sigma^2)$，相互独立。目标为 $\eta=\sigma^2/(\sigma_\tau^2+\sigma^2)=1-\rho$。
 
-$$\boxed{[1-U_\rho,\;1-L_\rho]}.$$
+令 $r=MS_A/MS_E$，$\theta=\sigma_\tau^2/\sigma^2$，由 $r/(1+n\theta)\sim F_{a-1,N-a}$，先求
 
-也可先求 $\theta=\sigma_\tau^2/\sigma^2$ 的区间，再用递减函数 $1/(1+\theta)$ 变换，注意交换端点。本题为补充解析。
+$$L=(r/F_{1-\alpha/2,a-1,N-a}-1)/n,\qquad U=(r/F_{\alpha/2,a-1,N-a}-1)/n.$$
+
+对递减函数 $\eta=1/(1+\theta)$ 变换，所求 **$100(1-\alpha)\%$ 区间结果**为
+
+$$\boxed{\left[\frac1{1+U},\frac1{1+L}\right]\cap[0,1]}.$$
+
+也可先得到 $\rho$ 的区间 $[L_\rho,U_\rho]$，再取 $[1-U_\rho,1-L_\rho]$。本题只求一般式，没有具体数据，结果为上述符号区间。
 
 ---
 

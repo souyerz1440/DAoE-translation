@@ -23,6 +23,8 @@ IMAGES = ROOT / 'Exercises' / 'images'
 IMAGES.mkdir(exist_ok=True)
 FONT = FontProperties(fname=str(ROOT / 'LXGWWenKai-Regular.ttf'))
 plt.rcParams.update({'axes.unicode_minus': False, 'font.size': 10})
+FIGURES_DONE=set()
+DIAGNOSTICS={}
 
 CHAPTERS = {1: ('引言', 12), 2: ('简单比较试验', 60), 3: ('单因子试验与方差分析', 71)}
 TEXTBOOK_PAGES = {1: '21～22', 2: '55～63', 3: '125～134'}
@@ -218,17 +220,60 @@ def analysis(key, transform='raw'):
     if transform=='sqrt': groups=[np.sqrt(g) for g in groups]
     if transform=='neglog': groups=[-np.log(g) for g in groups]
     r=anova(groups); a=r['a']; N=r['N']; df=N-a
-    txt=table(['来源','自由度','平方和','均方','$F$','$P$ 值'],[
+    txt=anova_method(key,transform)+'\n\n'+table(['来源','自由度','平方和','均方','$F$','$P$ 值'],[
         ['处理',a-1,fmt(r['ssa']),fmt(r['msa']),fmt(r['F']),fmt(r['p'])],
         ['误差',df,fmt(r['sse']),fmt(r['mse']),'—','—'],
         ['总计',N-1,fmt(r['ssa']+r['sse']),'—','—','—']])
     txt+='\n\n'+table(['组别','样本量','均值','样本标准差'],[[i+1,len(g),fmt(g.mean()),fmt(g.std(ddof=1))] for i,g in enumerate(groups)])
-    txt+='\n\n'+plot(key,groups,transform)
     return txt
+
+def anova_method(key='', transform='raw', random=None):
+    if random is None: random=key in ['3.34','3.35','3.36','3.37','3.40','3.41','3.42','3.43','3.62']
+    response={'raw':'原响应','log':r'$z_{ij}=\ln(y_{ij})$','sqrt':r'$z_{ij}=\sqrt{y_{ij}}$','neglog':r'$z_{ij}=-\ln(s_{ij})$'}.get(transform,'原响应')
+    if random:
+        model=r'''**模型与模型假设（随机效应）**：$y_{ij}=\mu+u_i+\epsilon_{ij}$，$u_i\overset{\mathrm{iid}}\sim N(0,\sigma_\tau^2)$，$\epsilon_{ij}\overset{\mathrm{iid}}\sim N(0,\sigma^2)$；随机效应与误差相互独立，抽取的水平代表目标水平总体。不同组独立，同组观测的边际协方差为 $\sigma_\tau^2$，不能把同组观测的边际独立性当作假设。
+
+**原假设和备择假设**：$H_0:\sigma_\tau^2=0$；$H_1:\sigma_\tau^2>0$。'''
+    else:
+        model=r'''**模型与模型假设（固定效应）**：$y_{ij}=\mu_i+\epsilon_{ij}=\mu+\tau_i+\epsilon_{ij}$，$i=1,\ldots,a$，$j=1,\ldots,n_i$；$\epsilon_{ij}\overset{\mathrm{iid}}\sim N(0,\sigma^2)$。误差独立、正态且同方差，处理分配及抽样符合题意；不平衡设计使用实际 $n_i$。取 $\sum_i n_i\tau_i=0$ 识别参数；平衡时等价于 $\sum_i\tau_i=0$。
+
+**原假设和备择假设**：$H_0:\mu_1=\cdots=\mu_a$；$H_1$：至少一个总体均值不同。'''
+    formulas=r'''
+
+**平方和公式与检验统计量**：令 $N=\sum_i n_i$，$\bar y_i=\sum_jy_{ij}/n_i$，$\bar y_{\cdot\cdot}=\sum_i\sum_jy_{ij}/N$。
+
+$$SS_A=\sum_i n_i(\bar y_i-\bar y_{\cdot\cdot})^2,\qquad SS_E=\sum_i\sum_j(y_{ij}-\bar y_i)^2,$$
+$$SS_T=\sum_i\sum_j(y_{ij}-\bar y_{\cdot\cdot})^2=SS_A+SS_E,$$
+$$MS_A=\frac{SS_A}{a-1},\quad MS_E=\frac{SS_E}{N-a},\quad F_0=\frac{MS_A}{MS_E}\overset{H_0}{\sim}F_{a-1,N-a}.$$
+
+当 $F_0>F_{1-\alpha,a-1,N-a}$ 时拒绝 $H_0$，$P=P(F_{a-1,N-a}\ge F_0)$。本文分位数均为**下侧累积概率分位数**。
+
+**点估计量**：$\hat\mu_i=\bar y_i$，$\hat\sigma^2=MS_E$；各组样本方差为 $s_i^2=\sum_j(y_{ij}-\bar y_i)^2/(n_i-1)$。以下为 ANOVA Table 与计算结果。'''
+    if transform!='raw': model=f'本次分析的响应为 {response}；以下模型与平方和中的 $y$ 均代表该变换后的响应。\n\n'+model
+    if random:
+        formulas=formulas.replace(r'**点估计量**：$\hat\mu_i=\bar y_i$，$\hat\sigma^2=MS_E$；各组样本方差为 $s_i^2=\sum_j(y_{ij}-\bar y_i)^2/(n_i-1)$。',r'**方差分量估计量**：$\hat\sigma^2=MS_E$，$\hat\sigma_\tau^2=(MS_A-MS_E)/n_0$，其中 $n_0=[N-\sum_i n_i^2/N]/(a-1)$，平衡时 $n_0=n$。表中组样本均值仅作描述，不是随机效应的 BLUP；各组样本方差为 $s_i^2=\sum_j(y_{ij}-\bar y_i)^2/(n_i-1)$。')
+    return model+formulas
+
+def summary_anova(a,n,F=None,total=None,treatment=None,error=None,error_df=None,total_df=None,random=False):
+    N=a*n if n else total_df+1
+    dfa=a-1; dfe=N-a
+    if total is not None and treatment is not None:
+        ssa=treatment; sse=total-treatment; mse=sse/dfe; msa=ssa/dfa; f=msa/mse
+        rows=[['处理',dfa,fmt(ssa),fmt(msa),fmt(f),fmt(stats.f.sf(f,dfa,dfe))],['误差',dfe,fmt(sse),fmt(mse),'—','—'],['总计',N-1,fmt(total),'—','—','—']]
+        note=''
+    else:
+        rows=[['处理',dfa,f'{fmt(F*dfa)}m',f'{fmt(F)}m',fmt(F),fmt(stats.f.sf(F,dfa,dfe))],['误差',dfe,f'{dfe}m','$m$','—','—'],['总计',N-1,f'{fmt(F*dfa+dfe)}m','—','—','—']]
+        note='原题未给原始观测或平方和，无法唯一恢复平方和的绝对数值。令 $m=MS_E>0$，下表保留其尺度，不虚构平方和。\n\n'
+    return anova_method(random=random)+'\n\n'+note+table(['来源','自由度','平方和','均方','$F$','$P$ 值'],rows)
+
+def planning_anova(a):
+    return anova_method()+'\n\n样本量规划尚未产生观测值，实际平方和未知，以下 ANOVA Table 仅列结构；不能把非中心参数当作已观测平方和。\n\n'+table(['来源','自由度','平方和','均方'],[['处理',str(a-1),'$SS_A$',f'$SS_A/{a-1}$'],['误差',f'${a}(n-1)$','$SS_E$',f'$SS_E/[{a}(n-1)]$'],['总计',f'${a}n-1$','$SS_T$','—']])
 
 def plot(key,groups,tag='raw'):
     fn=f'ch{key.replace(".","-")}-{tag}.png'
-    fig,axs=plt.subplots(1,3,figsize=(12,3.3),layout='constrained')
+    caption=f'![习题 {key}：观测值、残差 Q–Q 图、残差记录顺序图、残差 vs 拟合值图（{tag}）](../images/{fn})'
+    if fn in FIGURES_DONE: return caption
+    fig,axes=plt.subplots(2,2,figsize=(11,7),layout='constrained'); axs=axes.ravel()
     res=np.concatenate([g-g.mean() for g in groups]); fitted=np.concatenate([np.full(len(g),g.mean()) for g in groups])
     rng=np.random.default_rng(20261102)
     for i,g in enumerate(groups):
@@ -236,18 +281,73 @@ def plot(key,groups,tag='raw'):
         axs[0].plot([i+.75,i+1.25],[g.mean()]*2,color='#a33c27',lw=2)
     axs[0].set_xticks(range(1,len(groups)+1)); axs[0].set_xlabel('组别',fontproperties=FONT); axs[0].set_ylabel('响应值',fontproperties=FONT)
     axs[0].set_title('观测值与组均值',fontproperties=FONT)
-    if key.startswith('2.') and len(groups)>1:
-        for i,g in enumerate(groups):
-            (q,vals),(slope,intercept,_)=stats.probplot(g)
-            axs[1].scatter(q,vals,s=16,label=str(i+1)); axs[1].plot(q,slope*q+intercept,lw=1)
-        axs[1].legend(title='Group'); qqtitle='各组正态概率图'; qqylabel='有序观测值'
-    else:
-        stats.probplot(res,plot=axs[1]); qqtitle='残差正态概率图'; qqylabel='有序残差'
+    stats.probplot(res,plot=axs[1]); qqtitle='组内残差 Q–Q 图'; qqylabel='有序残差'
     axs[1].set_title(qqtitle,fontproperties=FONT); axs[1].set_xlabel('理论正态分位数',fontproperties=FONT); axs[1].set_ylabel(qqylabel,fontproperties=FONT)
-    axs[2].scatter(fitted,res,s=20,alpha=.7); axs[2].axhline(0,color='#a33c27',lw=1); axs[2].set_xlabel('拟合值',fontproperties=FONT); axs[2].set_ylabel('残差',fontproperties=FONT); axs[2].set_title('残差与拟合值',fontproperties=FONT)
+    if key=='3.35':
+        for i,g in enumerate(groups): axs[2].plot(range(1,len(g)+1),g-g.mean(),'o-',ms=4,lw=1,label=f'炉 {i+1}')
+        axs[2].legend(prop=FONT); axs[2].set_xlabel('炉内连续加热序号（各炉分别）',fontproperties=FONT); axs[2].set_title('各炉残差时序图（非统一时间轴）',fontproperties=FONT)
+    else:
+        axs[2].plot(np.arange(1,len(res)+1),res,'o-',ms=3,lw=.8)
+        for boundary in np.cumsum([len(g) for g in groups])[:-1]: axs[2].axvline(boundary+.5,color='gray',ls=':',lw=.7)
+        axs[2].set_xlabel('记录序号（非实际运行时间顺序）',fontproperties=FONT); axs[2].set_title('残差记录顺序图；虚线为组界',fontproperties=FONT)
+    axs[2].axhline(0,color='#a33c27',lw=1); axs[2].set_ylabel('组内残差',fontproperties=FONT)
+    axs[3].scatter(fitted,res,s=20,alpha=.7); axs[3].axhline(0,color='#a33c27',lw=1); axs[3].set_xlabel('拟合值',fontproperties=FONT); axs[3].set_ylabel('残差',fontproperties=FONT); axs[3].set_title('残差 vs 拟合值',fontproperties=FONT)
     for ax in axs: ax.grid(alpha=.15)
     fig.savefig(IMAGES/fn,dpi=140); plt.close(fig)
-    return f'![习题 {key}：观测值、正态概率图与残差诊断（{tag}）](../images/{fn})'
+    FIGURES_DONE.add(fn)
+    return caption
+
+def mean_plot(key):
+    gs=[np.array(g) for g in DATA[key]]; r=anova(gs); fn=f'ch{key.replace(".","-")}-means.png'
+    if fn not in FIGURES_DONE:
+        fig,axes=plt.subplots(1,2,figsize=(10,3.8),layout='constrained'); rng=np.random.default_rng(20261103)
+        for i,g in enumerate(gs): axes[0].scatter(np.full(len(g),i+1)+rng.uniform(-.07,.07,len(g)),g,s=18)
+        half=stats.t.ppf(.975,r['N']-r['a'])*np.sqrt(r['mse']/r['ns']); axes[1].errorbar(range(1,len(gs)+1),r['means'],yerr=half,fmt='o',capsize=5)
+        for ax,title in zip(axes,['观测值散点图','组均值及逐组 95% 区间']):
+            ax.set_xlabel('组别',fontproperties=FONT); ax.set_ylabel('响应值',fontproperties=FONT); ax.set_title(title,fontproperties=FONT); ax.set_xticks(range(1,len(gs)+1)); ax.grid(alpha=.15)
+        fig.savefig(IMAGES/fn,dpi=140); plt.close(fig); FIGURES_DONE.add(fn)
+    return r'图中均值估计量为 $\bar y_i$，误差条为 $\bar y_i\pm t_{0.975,N-a}\sqrt{MS_E/n_i}$；均值区间的重叠情况不能直接代替均值差检验。'+f'\n\n![习题 {key}：散点图和处理均值区间图](../images/{fn})'
+
+def diagnostic_view(key,view):
+    gs=[np.array(g) for g in DATA[key]]; residual=np.concatenate([g-g.mean() for g in gs]); fitted=np.concatenate([np.full(len(g),g.mean()) for g in gs]); fn=f'ch{key.replace(".","-")}-{view}.png'
+    titles={'qqres':'残差 Q–Q 图','sequence':'残差记录顺序图（非实际运行时序）','resfit':'残差 vs 拟合值图'}
+    DIAGNOSTICS.setdefault(key+'|raw',{'exercise':key,'scale':'raw','actual_run_order_available':False,'sequence_basis':'原表组内记录顺序','residual':'y_ij - group_mean','n':len(residual)})
+    if fn not in FIGURES_DONE:
+        fig,ax=plt.subplots(figsize=(7,4),layout='constrained')
+        if view=='qqres': stats.probplot(residual,plot=ax); ax.set_xlabel('理论正态分位数',fontproperties=FONT); ax.set_ylabel('有序残差',fontproperties=FONT)
+        elif view=='sequence': ax.plot(range(1,len(residual)+1),residual,'o-',ms=4); ax.axhline(0,color='gray',lw=1); ax.set_xlabel('原表组内记录序号',fontproperties=FONT); ax.set_ylabel('残差',fontproperties=FONT)
+        else: ax.scatter(fitted,residual); ax.axhline(0,color='gray',lw=1); ax.set_xlabel('拟合值',fontproperties=FONT); ax.set_ylabel('残差',fontproperties=FONT)
+        ax.set_title(titles[view],fontproperties=FONT); fig.savefig(IMAGES/fn,dpi=140); plt.close(fig); FIGURES_DONE.add(fn)
+    text=f'![习题 {key}：{titles[view]}](../images/{fn})'
+    if view=='sequence': text+='\n\n原资料未给实际运行时间和随机运行次序。本图仅按原表记录顺序绘制，**不能当作实际残差时序图**，也不能用来证明时间独立性；取得真实运行顺序后须重画。'
+    return text
+
+def diagnostics(key,transform='raw'):
+    gs=[np.array(g,dtype=float) for g in DATA[key]]
+    if transform=='log': gs=[np.log(g) for g in gs]
+    elif transform=='sqrt': gs=[np.sqrt(g) for g in gs]
+    elif transform=='neglog': gs=[-np.log(g) for g in gs]
+    elif transform=='paired': gs=[gs[0]-gs[1]]
+    DIAGNOSTICS[key+'|'+transform]={'exercise':key,'scale':transform,'actual_run_order_available':False,'within_group_order_available':key=='3.35','sequence_basis':'题干明确的炉内连续加热次序' if key=='3.35' else '原表组内记录顺序','residual':'paired_difference - mean_difference' if transform=='paired' else 'transformed_y_ij - transformed_group_mean','n':sum(len(g) for g in gs)}
+    residual=r'$\hat y_{ij}=\bar y_i$，$e_{ij}=y_{ij}-\bar y_i$'
+    if transform=='paired': residual=r'对配对差 $d_i=y_{i1}-y_{i2}$ 拟合常数均值：$\hat d_i=\bar d$，$e_i=d_i-\bar d$'
+    qualifier='随机效应题这里采用组内中心化残差检查组内误差；组均值是诊断基准，不冒充 REML 的 BLUP 拟合值。' if key in ['3.34','3.35','3.36','3.42','3.62'] else ''
+    figures=plot(key,gs,transform)
+    if key=='3.35':
+        return f'**残差定义**：{residual}。{qualifier}\n\n'+figures+'\n\n**三项诊断**：右上为组内残差 Q–Q 图，左下按各炉连续加热序号分别画残差时序，右下为残差 vs 拟合值图。题干明确了各炉内部的连续加热先后，因此可检查炉内随顺序的变化；没有跨炉统一运行时间，不能把三炉拼成真实的共同时间轴，也不能据此验证跨炉时间关系。'
+    return f'**残差定义**：{residual}。变换分析时使用相应变换尺度的响应。{qualifier}\n\n'+figures+r'''
+
+**三项诊断**：Q–Q 图用于检查尾部、偏态及异常残差；残差记录顺序图用于展示原表记录的相邻变化；残差 vs 拟合值图用于观察方差是否随处理均值变化。
+
+**时序资料的限制**：原题只提供分组观测，没有实际运行时间和随机运行次序。左下图按原表组内记录顺序排列，虚线表示组界，**不是实际残差时序图**；组界附近的变化不能解释为时间效应。若要完成真正的时序诊断，须取得原始运行顺序后按该顺序重画。当前不能仅凭此图断言误差在时间上独立。单样本或配对差的拟合值为常数时，残差 vs 拟合值图也不能检验复杂均值结构。'''
+
+def qq_groups(key):
+    gs=[np.array(g) for g in DATA[key]]; fn=f'ch{key.replace(".","-")}-groups-qq.png'
+    fig,axes=plt.subplots(1,len(gs),figsize=(5*len(gs),3.8),squeeze=False,layout='constrained')
+    for i,(g,ax) in enumerate(zip(gs,axes.ravel())):
+        stats.probplot(g,plot=ax); ax.set_title(f'第 {i+1} 组正态 Q–Q 图',fontproperties=FONT); ax.set_xlabel('理论正态分位数',fontproperties=FONT); ax.set_ylabel('有序观测值',fontproperties=FONT)
+    fig.savefig(IMAGES/fn,dpi=140); plt.close(fig)
+    return f'![习题 {key}：各样本分别绘制的正态 Q–Q 图](../images/{fn})'
 
 DATA_LABELS = {
     '2.26':['机器 1','机器 2'], '2.28':['配方 1','配方 2'],
@@ -278,13 +378,16 @@ def pairs(key,alpha=.05,method='tukey'):
         se=np.sqrt(r['mse']*(1/r['ns'][i]+1/r['ns'][j])); diff=r['means'][i]-r['means'][j]
         half=(stats.studentized_range.ppf(1-alpha,r['a'],df)/np.sqrt(2) if method=='tukey' else stats.t.ppf(1-alpha/2,df))*se
         rows.append([f'{i+1} − {j+1}',fmt(diff),f'({fmt(diff-half)}, {fmt(diff+half)})','是' if abs(diff)>half else '否'])
-    return table(['均值对','均值差',f'{100*(1-alpha):g}% 区间','显著'],rows)
+    formula=r'**估计量与区间公式**：$\widehat{\mu_i-\mu_j}=\bar y_i-\bar y_j$，$SE_{ij}=\sqrt{MS_E(1/n_i+1/n_j)}$。'
+    if method=='tukey': formula+=r' Tukey–Kramer 同时区间为 $(\bar y_i-\bar y_j)\pm q_{1-\alpha,a,N-a}SE_{ij}/\sqrt2$；区间不含零则相应均值对显著，控制全部两两比较的家族错误率。'
+    else: formula+=r' Fisher LSD 的逐对区间为 $(\bar y_i-\bar y_j)\pm t_{1-\alpha/2,N-a}SE_{ij}$；它不是全部比较的同时置信区间。'
+    return formula+'\n\n'+table(['均值对','均值差',f'{100*(1-alpha):g}% 区间','显著'],rows)
 
 def mean_ci(key,level=.95):
     r=anova(DATA[key]); q=stats.t.ppf((1+level)/2,r['N']-r['a'])
-    return table(['组别',f'{level*100:g}% 均值置信区间（逐个区间）'],[[i+1,f'({fmt(m-q*np.sqrt(r["mse"]/n))}, {fmt(m+q*np.sqrt(r["mse"]/n))})'] for i,(m,n) in enumerate(zip(r['means'],r['ns']))])
+    return r'**估计量与区间公式**：$\hat\mu_i=\bar y_i$，$\widehat{SE}(\bar y_i)=\sqrt{MS_E/n_i}$，区间为 $\bar y_i\pm t_{1-\alpha/2,N-a}\sqrt{MS_E/n_i}$。以下各区间均为逐个区间。'+'\n\n'+table(['组别','均值点估计','估计标准误',f'{level*100:g}% 均值置信区间（逐个区间）'],[[i+1,fmt(m),fmt(np.sqrt(r['mse']/n)),f'({fmt(m-q*np.sqrt(r["mse"]/n))}, {fmt(m+q*np.sqrt(r["mse"]/n))})'] for i,(m,n) in enumerate(zip(r['means'],r['ns']))])
 
-def two(key,paired=False,known=None,delta=0,alternative='two-sided',level=.95,welch=False):
+def two(key,paired=False,known=None,delta=0,alternative='two-sided',level=.95,welch=False,mode='all'):
     g1,g2=map(np.array,DATA[key]); n1=len(g1); n2=len(g2); diff=g1.mean()-g2.mean()
     if paired:
         d=g1-g2; se=d.std(ddof=1)/np.sqrt(n1); df=n1-1
@@ -297,20 +400,38 @@ def two(key,paired=False,known=None,delta=0,alternative='two-sided',level=.95,we
     dist=stats.norm if np.isinf(df) else stats.t(df)
     t=(diff-delta)/se; p=2*dist.sf(abs(t)) if alternative=='two-sided' else (dist.sf(t) if alternative=='greater' else dist.cdf(t))
     q=dist.ppf((1+level)/2); lo=diff-q*se; hi=diff+q*se
-    return f'两组样本均值为 {fmt(g1.mean())}、{fmt(g2.mean())}；均值差（第 1 组减第 2 组）为 {fmt(diff)}，标准误为 {fmt(se)}。检验统计量为 {fmt(t)}，自由度为 {fmt(df)}，$P={fmt(p)}$。均值差的 {level*100:g}% 双侧置信区间为 $({fmt(lo)}, {fmt(hi)})$。'
+    formula=r'$\hat\Delta=\bar y_1-\bar y_2$'
+    if paired: formula=r'$d_i=y_{i1}-y_{i2}$，$\hat\Delta=\bar d$，$s_d^2=\sum_i(d_i-\bar d)^2/(n-1)$，$SE=s_d/\sqrt n$，$\nu=n-1$'
+    elif known: formula+=r'，$SE=\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}$，使用标准正态分布'
+    elif welch: formula+=r'，$SE=\sqrt{s_1^2/n_1+s_2^2/n_2}$，$\nu=\dfrac{(s_1^2/n_1+s_2^2/n_2)^2}{(s_1^2/n_1)^2/(n_1-1)+(s_2^2/n_2)^2/(n_2-1)}$'
+    else: formula+=r'，$s_p^2=\dfrac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}$，$SE=s_p\sqrt{1/n_1+1/n_2}$，$\nu=n_1+n_2-2$'
+    estimate=f'**估计量公式**：{formula}。\n\n**计算结果**：两组均值为 {fmt(g1.mean())}、{fmt(g2.mean())}；差估计为 {fmt(diff)}，标准误为 {fmt(se)}。'
+    distribution='标准正态分布' if known else f'自由度 {fmt(df)} 的 t 分布'
+    test=f'检验统计量 ${"Z" if known else "t"}_0=(\\hat\\Delta-\\Delta_0)/SE={fmt(t)}$，按{distribution}取'+{'two-sided':'双侧','greater':'右侧','less':'左侧'}[alternative]+f'尾概率，$P={fmt(p)}$。'
+    ci=r'**区间公式**：$\hat\Delta\pm '+(r'z_{1-\alpha/2}' if known else r't_{1-\alpha/2,\nu}')+r'SE$。'+f'\n\n**结果**：均值差的 {level*100:g}% 双侧置信区间为 $({fmt(lo)}, {fmt(hi)})$。'
+    if mode=='p': return f'$P={fmt(p)}$。'
+    return estimate+'\n\n'+(test if mode=='test' else ci if mode=='ci' else test+'\n\n'+ci)
+
+def two_summary(n,m1,m2,s1,s2,welch=False):
+    se=np.sqrt((s1*s1+s2*s2)/n); df=(s1*s1+s2*s2)**2/((s1**4+s2**4)/(n-1)) if welch else 2*n-2
+    diff=m1-m2; t=diff/se; p=2*stats.t.sf(abs(t),df); h=stats.t.ppf(.975,df)*se
+    model='两总体独立、正态，方差不假定相等，使用 Welch–Satterthwaite 近似。' if welch else '两总体独立、正态、同方差，使用合并方差 t 方法。'
+    formula=r'$\hat\Delta=\bar y_1-\bar y_2$，$SE=\sqrt{s_1^2/n+s_2^2/n}$。'
+    formula+=(r'$\nu=(s_1^2/n+s_2^2/n)^2/[(s_1^2/n)^2/(n-1)+(s_2^2/n)^2/(n-1)]$。' if welch else r'$s_p^2=[(n-1)s_1^2+(n-1)s_2^2]/(2n-2)$，$\nu=2n-2$。')
+    return model+'\n\n**估计量与检验公式**：'+formula+r'$t_0=\hat\Delta/SE$ 检验 $H_0:\Delta=0$ 对 $H_1:\Delta\ne0$，区间公式为 $\hat\Delta\pm t_{0.975,\nu}SE$。'+f'\n\n**结果**：差估计 {fmt(diff)}，标准误 {fmt(se)}，自由度 {fmt(df)}，$t_0={fmt(t)}$，$P={fmt(p)}$；95% 区间为 $({fmt(diff-h)}, {fmt(diff+h)})$。'
 
 def random_components(key):
     r=anova(DATA[key]); n0=(r['N']-sum(r['ns']**2)/r['N'])/(r['a']-1)
     v=(r['msa']-r['mse'])/n0; rho=v/(v+r['mse'])
-    txt=f'$n_0={fmt(n0)}$，矩估计为 $\\hat\\sigma^2={fmt(r["mse"])}$，$\\hat\\sigma_\\tau^2={fmt(v)}$。'
+    txt=r'**估计量公式**：$n_0=[N-\sum_i n_i^2/N]/(a-1)$（平衡时为 $n$），$\hat\sigma^2=MS_E$，$\hat\sigma_\tau^2=(MS_A-MS_E)/n_0$；$\widehat{\sigma_T^2}=\hat\sigma^2+\hat\sigma_\tau^2$，$\hat\rho=\hat\sigma_\tau^2/\widehat{\sigma_T^2}$。'+'\n\n'+f'**结果**：$n_0={fmt(n0)}$，矩估计为 $\\hat\\sigma^2={fmt(r["mse"])}$，$\\hat\\sigma_\\tau^2={fmt(v)}$。'
     if v>=0: txt+=f'总方差为 {fmt(v+r["mse"])}，组间方差占比为 {rho:.2%}。'
     else: txt+='组间分量的无约束矩估计为负，不能解释为有效的方差或方差占比。'
     if len(set(r['ns']))==1:
         L=(r['F']/stats.f.ppf(.975,r['a']-1,r['N']-r['a'])-1)/n0
         U=(r['F']/stats.f.ppf(.025,r['a']-1,r['N']-r['a'])-1)/n0
-        txt+=f'组内相关系数的 95% 置信区间（截断到参数空间）为 $({fmt(max(0,L/(1+L)))}, {fmt(min(1,U/(1+U)))})$。'
+        txt+=r' 组内相关区间由 $r=MS_A/MS_E$，$L=(r/F_{0.975,a-1,N-a}-1)/n$，$U=(r/F_{0.025,a-1,N-a}-1)/n$，再将 $[L/(1+L),U/(1+U)]$ 与 $[0,1]$ 相交求得。'+f'结果为 $({fmt(max(0,L/(1+L)))}, {fmt(min(1,U/(1+U)))})$。'
     lo=(r['N']-r['a'])*r['mse']/stats.chi2.ppf(.975,r['N']-r['a']); hi=(r['N']-r['a'])*r['mse']/stats.chi2.ppf(.025,r['N']-r['a'])
-    txt+=f'误差方差的精确 95% 卡方区间为 $({fmt(lo)}, {fmt(hi)})$。'
+    txt+=r' 误差方差区间公式为 $[(N-a)MS_E/\chi^2_{0.975,N-a},(N-a)MS_E/\chi^2_{0.025,N-a}]$，'+f'精确 95% 卡方区间结果为 $({fmt(lo)}, {fmt(hi)})$。'
     return txt
 
 def power2(n,d,s,alpha=.05,one=False,known=False):
@@ -323,6 +444,21 @@ def power2(n,d,s,alpha=.05,one=False,known=False):
 def powera(n,means,s2,alpha=.05):
     a=len(means); nc=n*sum((np.array(means)-np.mean(means))**2)/s2
     return stats.ncf.sf(stats.f.ppf(1-alpha,a-1,a*(n-1)),a-1,a*(n-1),nc)
+
+def component(key,which):
+    r=anova(DATA[key]); n0=(r['N']-sum(r['ns']**2)/r['N'])/(r['a']-1); v=(r['msa']-r['mse'])/n0
+    if which=='tau': return r'$\hat\sigma_\tau^2=(MS_A-MS_E)/n_0$，其中 $n_0=[N-\sum_i n_i^2/N]/(a-1)$；'+f'$n_0={fmt(n0)}$，结果为 $\\hat\\sigma_\\tau^2={fmt(v)}$。'+('无约束估计为负，应限制在非负参数空间中重新估计，不能解释为负的实际方差。' if v<0 else '')
+    if which=='error': return r'$\hat\sigma^2=MS_E=SS_E/(N-a)$，'+f'结果为 $\\hat\\sigma^2={fmt(r["mse"])}$。'
+    if which=='total': return r'$\widehat{\sigma_T^2}=\hat\sigma_\tau^2+\hat\sigma^2$，'+f'结果为 {fmt(v+r["mse"])}。'
+    if which=='rho': return r'$\hat\rho=\hat\sigma_\tau^2/(\hat\sigma_\tau^2+\hat\sigma^2)$，'+f'结果为 {v/(v+r["mse"]):.4%}。'
+    if which=='rhoci':
+        assert len(set(r['ns']))==1
+        lo=(r['F']/stats.f.ppf(.975,r['a']-1,r['N']-r['a'])-1)/n0; hi=(r['F']/stats.f.ppf(.025,r['a']-1,r['N']-r['a'])-1)/n0
+        return r'令 $r=MS_A/MS_E$、$\theta=\sigma_\tau^2/\sigma^2$，由 $r/(1+n\theta)\sim F_{a-1,N-a}$，得 $L=(r/F_{0.975,a-1,N-a}-1)/n$、$U=(r/F_{0.025,a-1,N-a}-1)/n$。对 $\rho=\theta/(1+\theta)$ 作单调变换，并截断到参数空间：'+f'\n\n$$CI_{{0.95}}(\\rho)=({fmt(max(0,lo/(1+lo)))}, {fmt(min(1,hi/(1+hi)))})$$'
+    if which=='errorci':
+        df=r['N']-r['a']; low=df*r['mse']/stats.chi2.ppf(.975,df); high=df*r['mse']/stats.chi2.ppf(.025,df)
+        return r'$CI_{0.95}(\sigma^2)=[(N-a)MS_E/\chi^2_{0.975,N-a},(N-a)MS_E/\chi^2_{0.025,N-a}]$，'+f'结果为 $({fmt(low)},{fmt(high)})$。'
+    raise ValueError(which)
 
 def source_note(ch,n):
     if ch==1: return f'参考：`ch01.pdf`，'+(f'保留题 1.{n-10}R。' if n>10 else f'原题 1.{n}'+('S' if n in [1,9,10] else '')+'。')
@@ -360,7 +496,29 @@ def expand(match):
     if op=='pairs': return pairs(key,float(args[0]) if args else .05,args[1] if len(args)>1 else 'tukey')
     if op=='ci': return mean_ci(key,float(args[0]) if args else .95)
     if op=='random': return random_components(key)
-    if op=='plot': return plot(key,[np.array(g) for g in DATA[key]])
+    if op in ['plot','diagnostics']: return diagnostics(key,args[0] if args else 'raw')
+    if op=='qq': return qq_groups(key)
+    if op=='meansplot': return mean_plot(key)
+    if op in ['qqres','sequence','resfit']: return diagnostic_view(key,op)
+    if op=='model': return anova_method(key,args[0] if args else 'raw')
+    if op=='component': return component(key,args[0])
+    if op=='twosummary': return two_summary(int(key),*map(float,args[:4]),welch=len(args)>4 and args[4]=='welch')
+    if op=='pvalue':
+        r=anova(DATA[key]); return f'$P=P(F_{{{r["a"]-1},{r["N"]-r["a"]}}}\\ge{fmt(r["F"])})={fmt(r["p"])}$。'
+    if op=='levene':
+        groups=[np.abs(np.array(g)-np.median(g)) for g in DATA[key]]; r=anova(groups)
+        text=anova_method().replace('**模型与模型假设（固定效应）**','**绝对偏差的工作模型与近似假设**')
+        text=text.replace('以下为 ANOVA Table 与计算结果。','以下对 $z_{ij}=|y_{ij}-\\tilde y_i|$ 计算 ANOVA Table。F 校准为近似；绝对偏差未必严格正态，同组中位数估计还引入约束。')
+        return '以下模型和平方和中的 $y$ 均指绝对偏差 $z$，不是原始电池寿命。\n\n'+text+'\n\n'+table(['来源','自由度','平方和','均方','$F$','$P$'],[['组别',r['a']-1,fmt(r['ssa']),fmt(r['msa']),fmt(r['F']),fmt(r['p'])],['误差',r['N']-r['a'],fmt(r['sse']),fmt(r['mse']),'—','—'],['总计',r['N']-1,fmt(r['ssa']+r['sse']),'—','—','—']])
+    if op=='corrupted':
+        gs=[g[:] for g in DATA[key]]; i,j=max(((i,j) for i,g in enumerate(gs) for j in range(len(g))),key=lambda ij:gs[ij[0]][ij[1]]); gs[i][j]=250; r=anova(gs)
+        return table(['来源','自由度','平方和','均方','$F$','$P$'],[['处理',r['a']-1,fmt(r['ssa']),fmt(r['msa']),fmt(r['F']),fmt(r['p'])],['误差',r['N']-r['a'],fmt(r['sse']),fmt(r['mse']),'—','—'],['总计',r['N']-1,fmt(r['ssa']+r['sse']),'—','—','—']])
+    if op=='fsummary': return summary_anova(int(key),int(args[0]),F=float(args[1]))
+    if op=='planning': return planning_anova(int(key))
+    if op=='summary': return summary_anova(int(key),int(args[0]),total=float(args[1]),treatment=float(args[2]),random=len(args)>3 and args[3]=='random')
+    if op=='diffci':
+        i,j=int(args[0])-1,int(args[1])-1; level=float(args[2]) if len(args)>2 else .95; r=anova(DATA[key]); diff=r['means'][i]-r['means'][j]; se=np.sqrt(r['mse']*(1/r['ns'][i]+1/r['ns'][j])); h=stats.t.ppf((1+level)/2,r['N']-r['a'])*se
+        return r'$\widehat{\mu_i-\mu_j}=\bar y_i-\bar y_j$，$SE=\sqrt{MS_E(1/n_i+1/n_j)}$，区间为 $(\bar y_i-\bar y_j)\pm t_{1-\alpha/2,N-a}SE$。'+f'\n\n对第 {i+1} 组减第 {j+1} 组，点估计 {fmt(diff)}，标准误 {fmt(se)}；{100*level:g}% 区间为 $({fmt(diff-h)}, {fmt(diff+h)})$。'
     if op=='box':
         fn=f'ch{key.replace(".","-")}-box.png'; fig,ax=plt.subplots(figsize=(5.5,3.4),layout='constrained'); ax.boxplot(DATA[key],tick_labels=['125 SCCM','200 SCCM']); ax.set_ylabel('刻蚀均匀性',fontproperties=FONT); ax.set_title('两种流量的箱线图',fontproperties=FONT); fig.savefig(IMAGES/fn,dpi=140); plt.close(fig)
         return f'![125 与 200 SCCM 流量的刻蚀均匀性箱线图](../images/{fn})'
@@ -375,10 +533,19 @@ def expand(match):
         return f'方差比 $F={fmt(f)}$，自由度为 $({len(g1)-1},{len(g2)-1})$，双侧 $P={fmt(p)}$。'
     if op=='one':
         g=np.array(DATA[key][0]); mu=float(args[0]); level=float(args[1]) if len(args)>1 else .95; alt=args[2] if len(args)>2 else 'greater'; n=len(g); se=g.std(ddof=1)/np.sqrt(n); t=(g.mean()-mu)/se; p=2*stats.t.sf(abs(t),n-1) if alt=='two-sided' else stats.t.sf(t,n-1); half=stats.t.ppf((1+level)/2,n-1)*se
-        return f'$n={n}$，$\\bar y={fmt(g.mean())}$，$s={fmt(g.std(ddof=1))}$，$t_0={fmt(t)}$，自由度 {n-1}，$P={fmt(p)}$。均值的 {100*level:g}% 双侧置信区间为 $({fmt(g.mean()-half)}, {fmt(g.mean()+half)})$。'
+        mode=args[3] if len(args)>3 else 'all'
+        if mode=='p': return f'$P={fmt(p)}$。'
+        point=r'$\hat\mu=\bar y=\sum_i y_i/n$，$s^2=\sum_i(y_i-\bar y)^2/(n-1)$，$SE=s/\sqrt n$。'+f'$n={n}$，$\\bar y={fmt(g.mean())}$，$s={fmt(g.std(ddof=1))}$。'
+        test=r'正态独立样本下，$t_0=(\bar y-\mu_0)/(s/\sqrt n)$，在 $H_0$ 下服从 $t_{n-1}$。'+f'统计量 {fmt(t)}，自由度 {n-1}，'+('双侧' if alt=='two-sided' else '右侧')+f'$P={fmt(p)}$。'
+        ci=r'均值区间公式为 $\bar y\pm t_{1-\alpha/2,n-1}s/\sqrt n$。'+f'{100*level:g}% 双侧置信区间为 $({fmt(g.mean()-half)}, {fmt(g.mean()+half)})$。'
+        return point+'\n\n'+(ci if mode=='ci' else test if mode=='test' else test+'\n\n'+ci)
     if op=='variance':
         g=np.array(DATA[key][0]); df=len(g)-1; s2=g.var(ddof=1); chi=df*s2; p=min(1,2*min(stats.chi2.cdf(chi,df),stats.chi2.sf(chi,df)))
-        return f'$s^2={fmt(s2)}$，$\\chi_0^2={fmt(chi)}$，自由度 {df}，检验 $H_0:\\sigma^2=1$ 的双侧 $P={fmt(p)}$；方差的 95% 置信区间为 $({fmt(chi/stats.chi2.ppf(.975,df))}, {fmt(chi/stats.chi2.ppf(.025,df))})$。'
+        mode=args[0] if args else 'all'
+        point=r'$\hat\sigma^2=s^2=\sum_i(y_i-\bar y)^2/(n-1)$，'+f'$s^2={fmt(s2)}$。'
+        ci=r'正态总体下，$CI_{0.95}(\sigma^2)=[(n-1)s^2/\chi^2_{0.975,n-1},(n-1)s^2/\chi^2_{0.025,n-1}]$，'+f'结果为 $({fmt(chi/stats.chi2.ppf(.975,df))}, {fmt(chi/stats.chi2.ppf(.025,df))})$。'
+        test=r'$H_0:\sigma^2=1$ 对 $H_1:\sigma^2\ne1$；$\chi_0^2=(n-1)s^2/\sigma_0^2$，'+f'结果为 {fmt(chi)}，自由度 {df}，双侧 $P={fmt(p)}$。'
+        return point+'\n\n'+(ci if mode=='ci' else test if mode=='test' else ci+'\n\n'+test)
     if op=='two': return two(key,**json.loads('|'.join(args)) if args else {})
     raise ValueError(match.group(0))
 
@@ -391,7 +558,7 @@ if __name__=='__main__':
         def plot(key,groups,tag='raw'):
             fn=f'ch{key.replace(".","-")}-{tag}.png'
             assert (IMAGES/fn).is_file(),fn
-            return f'![习题 {key}：观测值、正态概率图与残差诊断（{tag}）](../images/{fn})'
+            return f'![习题 {key}：观测值、残差 Q–Q 图、残差记录顺序图、残差 vs 拟合值图（{tag}）](../images/{fn})'
     (ROOT/'Exercises'/'data').mkdir(exist_ok=True)
     (ROOT/'Exercises'/'data'/'chapter01-03.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     manifest=[]
@@ -401,6 +568,7 @@ if __name__=='__main__':
         manifest.extend(write_pages(int(p.stem[-2:]),text))
         print(p.name)
     (ROOT/'Exercises/data/pages.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (ROOT/'Exercises/data/diagnostics.json').write_text(json.dumps(DIAGNOSTICS,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     toc_path=ROOT/'toc.yml'
     toc=toc_path.read_text(encoding='utf8')
     start=toc.index('    - file: Exercises/index.md')

@@ -27,7 +27,16 @@ for chapter,count in [(1,12),(2,60),(3,71)]:
         assert body.count('\n# 习题 ')==1
         assert body.count('\n## 题目\n')==1 and body.count('\n## 答案与解析\n')==1
         assert ':::{admonition}' not in body and '{{' not in body and '\ufffd' not in body
+        assert not re.search(r'[\x00-\x09\x0b\x0c\x0e-\x1f]',body),(single,'Unexpected control character in equations')
         assert '**答案来源**' in body and '[本章题目目录]' in body
+        question=body.split('\n## 题目\n',1)[1].split('\n## 答案与解析\n',1)[0]
+        answer=body.split('\n## 答案与解析\n',1)[1]
+        parts=list(dict.fromkeys(re.findall(r'\*\*（([a-g])）\*\*',question)))
+        if f'{chapter}.{n}' not in ['2.12','3.5','3.71']:
+            answers=re.findall(r'^### （([a-g])）',answer,re.M)
+            assert parts==answers,(single,parts,answers)
+        for lineno,line in enumerate(body.splitlines(),1):
+            assert len(re.findall(r'(?<!\\)\$',line))%2==0,(single,lineno,'Unbalanced math delimiters')
         assert toc.count(f'- file: {rel}\n')==1,rel
         pos=expected_numbers.index(f'{chapter}.{n}')
         if pos: assert f'[上一题 {expected_numbers[pos-1]}]' in body
@@ -43,6 +52,24 @@ for key,parts in [('2-31',7),('3-12',2),('3-62',6)]:
 assert '溶剂' in (ROOT/'Exercises/translations_zh/chapter02/exercise-2-31.md').read_text(encoding='utf8')
 assert '桡骨远端骨折' in (ROOT/'Exercises/translations_zh/chapter03/exercise-3-10.md').read_text(encoding='utf8')
 print('Full backgrounds, source data for continuation questions and subquestion labels checked')
+
+anova_keys=set()
+for template in (ROOT/'_tools/exercise_templates').glob('chapter*.md'):
+    for block in re.finditer(r'^## ([123]\.\d+) [^\n]+\n([\s\S]*?)(?=^## [123]\.\d+ |\Z)',template.read_text(encoding='utf8'),re.M):
+        if re.search(r'\{\{(?:anova|summary|fsummary|planning|levene)\|',block[2]): anova_keys.add(block[1])
+for key in anova_keys:
+    c,n=map(int,key.split('.')); text=(ROOT/f'Exercises/translations_zh/chapter{c:02}/exercise-{c}-{n}.md').read_text(encoding='utf8').split('## 答案与解析',1)[1]
+    for required in ['模型','假设','H_0','H_1','SS_A','SS_E','MS_A','MS_E','| 来源 |','自由度']:
+        assert required in text,(key,required)
+diagnostics=json.loads((ROOT/'Exercises/data/diagnostics.json').read_text(encoding='utf8'))
+for item in diagnostics.values():
+    assert item['actual_run_order_available'] is False
+    assert item['sequence_basis']==('题干明确的炉内连续加热次序' if item['exercise']=='3.35' else '原表组内记录顺序')
+    assert item['n']>1
+assert diagnostics['2.35|paired']['n']==10
+assert diagnostics['3.35|raw']['n']==15
+assert diagnostics['3.35|raw']['within_group_order_available'] is True
+print(f'Requirements: subquestions match; {len(anova_keys)} ANOVA solutions contain all five elements; {len(diagnostics)} diagnostic sets document order availability')
 
 for page in all_pages:
     for url in re.findall(r'\]\(([^)]+)\)',page.read_text(encoding='utf8')):
@@ -86,6 +113,13 @@ if importlib.util.find_spec('scipy') and importlib.util.find_spec('matplotlib'):
         sd=np.sqrt(m['anova'](data[key])['mse'])
         assert m['power2'](required,effect,sd,one=one)>=.9
         assert m['power2'](required-1,effect,sd,one=one)<.9
+    for hours,required in [(10,111431),(8,174110)]:
+        d=hours/168
+        assert m['powera'](required,[0,d/2,d],15.6)>=.9
+        assert m['powera'](required-1,[0,d/2,d],15.6)<.9
+    random_method=m['anova_method']('3.34')
+    assert '不是随机效应的 BLUP' in random_method
+    assert r'\hat\mu_i=\bar y_i' not in random_method
     print('Independent ANOVA, corrected P values, ranks and minimum sample sizes verified')
 else:
     print('Numerical recomputation skipped: requires scipy and matplotlib')

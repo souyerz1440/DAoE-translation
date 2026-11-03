@@ -26,9 +26,40 @@ description: 第9版习题3.21的完整中文题目、数据与答案解析
 
 ## 答案与解析
 
-使用 Tukey–Kramer 方法，比较 $i,j$ 的区间半宽为
+**共同模型、假设与方差估计依据**
 
-$$q_{0.95,a,N-a}\sqrt{\frac{MS_E}{2}\left(\frac1{n_i}+\frac1{n_j}\right)}.$$
+**模型与模型假设（固定效应）**：$y_{ij}=\mu_i+\epsilon_{ij}=\mu+\tau_i+\epsilon_{ij}$，$i=1,\ldots,a$，$j=1,\ldots,n_i$；$\epsilon_{ij}\overset{\mathrm{iid}}\sim N(0,\sigma^2)$。误差独立、正态且同方差，处理分配及抽样符合题意；不平衡设计使用实际 $n_i$。取 $\sum_i n_i\tau_i=0$ 识别参数；平衡时等价于 $\sum_i\tau_i=0$。
+
+**原假设和备择假设**：$H_0:\mu_1=\cdots=\mu_a$；$H_1$：至少一个总体均值不同。
+
+**平方和公式与检验统计量**：令 $N=\sum_i n_i$，$\bar y_i=\sum_jy_{ij}/n_i$，$\bar y_{\cdot\cdot}=\sum_i\sum_jy_{ij}/N$。
+
+$$SS_A=\sum_i n_i(\bar y_i-\bar y_{\cdot\cdot})^2,\qquad SS_E=\sum_i\sum_j(y_{ij}-\bar y_i)^2,$$
+$$SS_T=\sum_i\sum_j(y_{ij}-\bar y_{\cdot\cdot})^2=SS_A+SS_E,$$
+$$MS_A=\frac{SS_A}{a-1},\quad MS_E=\frac{SS_E}{N-a},\quad F_0=\frac{MS_A}{MS_E}\overset{H_0}{\sim}F_{a-1,N-a}.$$
+
+当 $F_0>F_{1-\alpha,a-1,N-a}$ 时拒绝 $H_0$，$P=P(F_{a-1,N-a}\ge F_0)$。本文分位数均为**下侧累积概率分位数**。
+
+**点估计量**：$\hat\mu_i=\bar y_i$，$\hat\sigma^2=MS_E$；各组样本方差为 $s_i^2=\sum_j(y_{ij}-\bar y_i)^2/(n_i-1)$。以下为 ANOVA Table 与计算结果。
+
+| 来源 | 自由度 | 平方和 | 均方 | $F$ | $P$ 值 |
+| --- | --- | --- | --- | --- | --- |
+| 处理 | 3 | 0.156111 | 0.052037 | 2.02366 | 0.156875 |
+| 误差 | 14 | 0.36 | 0.0257143 | — | — |
+| 总计 | 17 | 0.516111 | — | — | — |
+
+| 组别 | 样本量 | 均值 | 样本标准差 |
+| --- | --- | --- | --- |
+| 1 | 5 | 21.74 | 0.114018 |
+| 2 | 4 | 21.5 | 0.141421 |
+| 3 | 5 | 21.72 | 0.164317 |
+| 4 | 4 | 21.7 | 0.216025 |
+
+用 Tukey–Kramer 方法处理不等样本量；$\widehat{\mu_i-\mu_j}=\bar y_i-\bar y_j$，均值差区间为
+
+$$ (\bar y_i-\bar y_j)\pm q_{1-\alpha,a,N-a}\sqrt{\frac{MS_E}{2}\left(\frac1{n_i}+\frac1{n_j}\right)}.$$
+
+**估计量与区间公式**：$\widehat{\mu_i-\mu_j}=\bar y_i-\bar y_j$，$SE_{ij}=\sqrt{MS_E(1/n_i+1/n_j)}$。 Tukey–Kramer 同时区间为 $(\bar y_i-\bar y_j)\pm q_{1-\alpha,a,N-a}SE_{ij}/\sqrt2$；区间不含零则相应均值对显著，控制全部两两比较的家族错误率。
 
 | 均值对 | 均值差 | 95% 区间 | 显著 |
 | --- | --- | --- | --- |
@@ -39,7 +70,7 @@ $$q_{0.95,a,N-a}\sqrt{\frac{MS_E}{2}\left(\frac1{n_i}+\frac1{n_j}\right)}.$$
 | 2 − 4 | -0.2 | (-0.529574, 0.129574) | 否 |
 | 3 − 4 | 0.02 | (-0.292661, 0.332661) | 否 |
 
-全部比较均不显著。不能简单把所有组样本量替换成某个整数平均值；各均值对有不同标准误。
+各均值对均不显著。每一对使用各自的 $n_i,n_j$，不能把所有组替换成同一个整数平均样本量。
 
 ---
 

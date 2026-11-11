@@ -1,5 +1,7 @@
 # 随机区组、拉丁方及相关设计
 
+[本章习题与解答（第 9 版 4.1～4.59）](../../Exercises/translations_zh/chapter04.md)
+
 > 本页对应原书第 4 章。原书为 Douglas C. Montgomery, *Design and Analysis of Experiments*, 10th ed., Wiley, 2019（ISBN 978-1-119-49244-3）；本项目不附带原书电子版，需对照原文请见[出版社页面](https://www.wiley.com/en-us/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443)。
 
 ## 本章学习目标

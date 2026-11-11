@@ -37,4 +37,4 @@ description: 第9版习题3.71的完整中文题目、数据与答案解析
 
 **关联题目**：[3.70](./exercise-3-70.md)
 
-← [上一题 3.70](./exercise-3-70.md) · [本章题目目录](../chapter03.md)
+← [上一题 3.70](./exercise-3-70.md) · [本章题目目录](../chapter03.md) · [下一题 4.1](../chapter04/exercise-4-1.md) →

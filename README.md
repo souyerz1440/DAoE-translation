@@ -8,7 +8,9 @@
 
 ## 内容范围
 
-新增“习题与答案”栏目：入口为 `Exercises/index.md`，顶部菜单和前 3 章章首页均可进入。按第 9 版编号完整收录前 3 章 143 题，题目、数据与答案解析均为中文；原答案题号错位及必要勘误在对应题旁注明。
+新增“习题与答案”栏目：入口为 `Exercises/index.md`，顶部菜单和前 4 章章首页均可进入。按第 9 版编号收录前 4 章 202 题，题目、数据与答案解析均为中文；原答案题号错位及必要勘误在对应题旁注明。
+
+第四章计算与编写源文件为 `_tools/build_chapter04_exercises.py`，可单独运行以重新生成 59 道题及图表，也会由总生成脚本自动调用。结构化数据、题号对应和计算摘要保存在 `Exercises/data/chapter04-*.json`。需要 numpy、scipy、matplotlib；这些依赖仅供编写和复算，读者及电子书构建不需要。
 
 习题按“章节 → 题号 → 独立页面”组织：`Exercises/translations_zh/chapter02.md` 是章目录，`Exercises/translations_zh/chapter02/exercise-2-31.md` 是单题页。每页包含完整中文背景、各小问、数据、直接展示的答案，以及上一题、下一题和关联题链接。
 

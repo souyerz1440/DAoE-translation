@@ -7,13 +7,15 @@ import math
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
+import os
+os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'_out/exercises/matplotlib'))
 all_pages = [ROOT/'Exercises'/'index.md']
 manifest=json.loads((ROOT/'Exercises/data/pages.json').read_text(encoding='utf8'))
-expected_numbers=[f'{ch}.{n}' for ch,total in [(1,12),(2,60),(3,71)] for n in range(1,total+1)]
+expected_numbers=[f'{ch}.{n}' for ch,total in [(1,12),(2,60),(3,71),(4,59)] for n in range(1,total+1)]
 assert [item['number'] for item in manifest]==expected_numbers
-assert len({item['file'] for item in manifest})==143
+assert len({item['file'] for item in manifest})==202
 toc=(ROOT/'toc.yml').read_text(encoding='utf8')
-for chapter,count in [(1,12),(2,60),(3,71)]:
+for chapter,count in [(1,12),(2,60),(3,71),(4,59)]:
     page=ROOT/'Exercises'/'translations_zh'/f'chapter{chapter:02}.md'
     text=page.read_text(encoding='utf8')
     numbers=[int(x) for x in re.findall(rf'^\| \[{chapter}\.(\d+)\]',text,re.M)]
@@ -40,7 +42,7 @@ for chapter,count in [(1,12),(2,60),(3,71)]:
         assert toc.count(f'- file: {rel}\n')==1,rel
         pos=expected_numbers.index(f'{chapter}.{n}')
         if pos: assert f'[上一题 {expected_numbers[pos-1]}]' in body
-        if pos<142: assert f'[下一题 {expected_numbers[pos+1]}]' in body
+        if pos<201: assert f'[下一题 {expected_numbers[pos+1]}]' in body
         all_pages.append(single)
     print(f'Chapter {chapter}: {count} independent pages, directory entries and previous/next links')
 
@@ -124,4 +126,36 @@ if importlib.util.find_spec('scipy') and importlib.util.find_spec('matplotlib'):
 else:
     print('Numerical recomputation skipped: requires scipy and matplotlib')
 
-print('PASS: 143 exercises')
+if importlib.util.find_spec('numpy'):
+    import numpy as np
+    source=json.loads((ROOT/'Exercises/data/chapter04-source.json').read_text(encoding='utf8'))
+    results=json.loads((ROOT/'Exercises/data/chapter04-results.json').read_text(encoding='utf8'))
+    # Closed-form balanced RCBD residuals independently check the regression code.
+    for key in ['8','9','12','13','14','15','16','18','19','26']:
+        y=np.array(source['rectangular'][key],float)
+        e=y-y.mean(axis=0)-y.mean(axis=1)[:,None]+y.mean()
+        assert np.isclose(np.sum(e**2),results[key+'{}']['sse'])
+        assert results[key+'{}']['df']==(y.shape[0]-1)*(y.shape[1]-1)
+    # Independent BIBD information-matrix and adjusted-total calculations.
+    for key in ['45','47','48']:
+        arr=np.array(source['rectangular'][key],float);inc=np.isfinite(arr).astype(float)
+        a,b=arr.shape;r=inc.sum(axis=1)[0];k=inc.sum(axis=0)[0]
+        assert np.all(inc.sum(axis=1)==r) and np.all(inc.sum(axis=0)==k)
+        pairs=inc@inc.T;lam=pairs[0,1]
+        assert np.all((pairs-np.diag(np.diag(pairs)))[~np.eye(a,dtype=bool)]==lam)
+        Q=np.nansum(arr,axis=1)-inc@np.nansum(arr,axis=0)/k
+        treatment=k*(Q@Q)/(lam*a)
+        total=np.nansum(arr**2)-np.nansum(arr)**2/np.isfinite(arr).sum()
+        blocks=np.sum(np.nansum(arr,axis=0)**2)/k-np.nansum(arr)**2/np.isfinite(arr).sum()
+        assert np.isclose(total-blocks-treatment,results[key+'{}']['sse'])
+    assert np.isclose(results['48{}']['sse'],3.25)
+    assert results["8{'missing': [(1, 2), (3, 3)]}"]['df']==10
+    assert results["27{'dropcol': 4}"]['df']==8
+    # Verify all pairs in the published binary affine construction.
+    blocks=[[x for x in range(8) if (u&x).bit_count()%2==v] for u in range(1,8) for v in [0,1]]
+    assert all(sum(i in bb and j in bb for bb in blocks)==3 for i in range(8) for j in range(i+1,8))
+    text=(ROOT/'Exercises/translations_zh/chapter04/exercise-4-58.md').read_text(encoding='utf8')
+    assert '| 误差 | 15 | 25.75 | 1.71667 |' in text
+    assert '18.1457%' in text
+    print('Chapter 4: independent RCBD and BIBD formulas, missing-value degrees of freedom and construction verified')
+print('PASS: 202 exercises')

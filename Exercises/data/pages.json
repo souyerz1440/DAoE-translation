@@ -713,5 +713,300 @@
     "number": "3.71",
     "title": "单个观测的标准差估计",
     "file": "Exercises/translations_zh/chapter03/exercise-3-71.md"
+  },
+  {
+    "number": "4.1",
+    "title": "忽略区组后的误差方差",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-1.md"
+  },
+  {
+    "number": "4.2",
+    "title": "区组化损失的误差自由度",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-2.md"
+  },
+  {
+    "number": "4.3",
+    "title": "区组控制干扰变异",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-3.md"
+  },
+  {
+    "number": "4.4",
+    "title": "区组数与处理数",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-4.md"
+  },
+  {
+    "number": "4.5",
+    "title": "区组化与随机化原则",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-5.md"
+  },
+  {
+    "number": "4.6",
+    "title": "补全区组试验方差分析表",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-6.md"
+  },
+  {
+    "number": "4.7",
+    "title": "将完全随机设计改按区组分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-7.md"
+  },
+  {
+    "number": "4.8",
+    "title": "化学剂与布料抗拉强度",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-8.md"
+  },
+  {
+    "number": "4.9",
+    "title": "洗涤液与细菌生长",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-9.md"
+  },
+  {
+    "number": "4.10",
+    "title": "处理均值与缩放 t 分布",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-10.md"
+  },
+  {
+    "number": "4.11",
+    "title": "处理均值与缩放 t 分布",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-11.md"
+  },
+  {
+    "number": "4.12",
+    "title": "压头与硬度读数",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-12.md"
+  },
+  {
+    "number": "4.13",
+    "title": "直邮宣传册回应数",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-13.md"
+  },
+  {
+    "number": "4.14",
+    "title": "润滑油与比油耗",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-14.md"
+  },
+  {
+    "number": "4.15",
+    "title": "喷嘴设计与形状因子",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-15.md"
+  },
+  {
+    "number": "4.16",
+    "title": "软件成本估计算法",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-16.md"
+  },
+  {
+    "number": "4.17",
+    "title": "白血病治疗与基因表达",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-17.md"
+  },
+  {
+    "number": "4.18",
+    "title": "比率控制算法与槽电压",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-18.md"
+  },
+  {
+    "number": "4.19",
+    "title": "搅拌速度与晶粒尺寸",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-19.md"
+  },
+  {
+    "number": "4.20",
+    "title": "用一般回归显著性检验分析洗涤液",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-20.md"
+  },
+  {
+    "number": "4.21",
+    "title": "固定效应参数估计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-21.md"
+  },
+  {
+    "number": "4.22",
+    "title": "洗涤液试验的操作特性曲线",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-22.md"
+  },
+  {
+    "number": "4.23",
+    "title": "缺失观测的估计与分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-23.md"
+  },
+  {
+    "number": "4.24",
+    "title": "缺失观测的估计与分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-24.md"
+  },
+  {
+    "number": "4.25",
+    "title": "随机区组中两个缺失值",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-25.md"
+  },
+  {
+    "number": "4.26",
+    "title": "距离与眼睛聚焦时间",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-26.md"
+  },
+  {
+    "number": "4.27",
+    "title": "配料反应时间的拉丁方",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-27.md"
+  },
+  {
+    "number": "4.28",
+    "title": "装配方法的拉丁方",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-28.md"
+  },
+  {
+    "number": "4.29",
+    "title": "随机区组方差分量估计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-29.md"
+  },
+  {
+    "number": "4.30",
+    "title": "随机区组方差分量估计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-30.md"
+  },
+  {
+    "number": "4.31",
+    "title": "随机区组方差分量估计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-31.md"
+  },
+  {
+    "number": "4.32",
+    "title": "随机区组方差分量估计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-32.md"
+  },
+  {
+    "number": "4.33",
+    "title": "受试者方差分量的可识别性",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-33.md"
+  },
+  {
+    "number": "4.34",
+    "title": "缺失观测的估计与分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-34.md"
+  },
+  {
+    "number": "4.35",
+    "title": "拉丁方固定效应的最小二乘估计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-35.md"
+  },
+  {
+    "number": "4.36",
+    "title": "拉丁方缺失值公式的推导",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-36.md"
+  },
+  {
+    "number": "4.37",
+    "title": "多个拉丁方的联合分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-37.md"
+  },
+  {
+    "number": "4.38",
+    "title": "拉丁方的样本量与功效",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-38.md"
+  },
+  {
+    "number": "4.39",
+    "title": "丢失整个日期的拉丁方",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-39.md"
+  },
+  {
+    "number": "4.40",
+    "title": "化学产率的希腊—拉丁方",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-40.md"
+  },
+  {
+    "number": "4.41",
+    "title": "增加工作场所的装配试验",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-41.md"
+  },
+  {
+    "number": "4.42",
+    "title": "五因子五水平超方的构造",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-42.md"
+  },
+  {
+    "number": "4.43",
+    "title": "两个装配拉丁方的联合分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-43.md"
+  },
+  {
+    "number": "4.44",
+    "title": "缺失观测的估计与分析",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-44.md"
+  },
+  {
+    "number": "4.45",
+    "title": "汽油添加剂的不完全区组试验",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-45.md"
+  },
+  {
+    "number": "4.46",
+    "title": "不完全区组的正交对比",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-46.md"
+  },
+  {
+    "number": "4.47",
+    "title": "硬木浓度与纸张强度",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-47.md"
+  },
+  {
+    "number": "4.48",
+    "title": "催化剂例题的一般回归检验",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-48.md"
+  },
+  {
+    "number": "4.49",
+    "title": "BIBD 调整处理平方和的证明",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-49.md"
+  },
+  {
+    "number": "4.50",
+    "title": "四处理二次运行区组的 BIBD",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-50.md"
+  },
+  {
+    "number": "4.51",
+    "title": "八处理十四区组的 BIBD",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-51.md"
+  },
+  {
+    "number": "4.52",
+    "title": "不完全区组的组间信息恢复",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-52.md"
+  },
+  {
+    "number": "4.53",
+    "title": "不完全区组的组间信息恢复",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-53.md"
+  },
+  {
+    "number": "4.54",
+    "title": "BIBD 不存在的必要条件",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-54.md"
+  },
+  {
+    "number": "4.55",
+    "title": "BIBD 组内效应估计量的方差",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-55.md"
+  },
+  {
+    "number": "4.56",
+    "title": "扩展不完全区组设计",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-56.md"
+  },
+  {
+    "number": "4.57",
+    "title": "区组化的自由度代价",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-57.md"
+  },
+  {
+    "number": "4.58",
+    "title": "Laura 的 ANOVA 表与区组化",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-58.md"
+  },
+  {
+    "number": "4.59",
+    "title": "直邮试验忽略地区区组的影响",
+    "file": "Exercises/translations_zh/chapter04/exercise-4-59.md"
   }
 ]

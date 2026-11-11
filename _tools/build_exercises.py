@@ -581,3 +581,6 @@ if __name__=='__main__':
                 lines.extend([f'            - file: {item["file"]}',f'              title: "{item["number"]} {item["title"]}"'])
     # Preserve the existing repository's CRLF convention.
     toc_path.write_bytes((toc[:start]+'\n'.join(lines)+'\n'+toc[end:]).replace('\r\n','\n').replace('\n','\r\n').encode('utf8'))
+    # Chapter 4 has its own blocked-design computations and publishing step.
+    import runpy
+    runpy.run_path(str(ROOT/'_tools/build_chapter04_exercises.py'),run_name='__main__')

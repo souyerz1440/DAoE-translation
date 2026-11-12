@@ -58,7 +58,8 @@ project:
     - "Chapter 15/sections/**"
 
 site:
-  template: book-theme
+  # Pin the theme to the version supported by jupyter-book 2.1.6 / MyST 1.10.1.
+  template: https://github.com/jupyter-book/myst-theme/releases/download/myst-to-react%401.4.1/book-theme.zip
   title: 试验设计与分析 中文翻译
   options:
     folders: true

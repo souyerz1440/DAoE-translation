@@ -26,7 +26,7 @@ description: 第9版习题4.10的中文题目、数据与答案解析
 
 ![处理均值与缩放 t 分布](../../images/ch4-10-scaled-t.png)
 
-绘制 $m_i+s_\bar y t_{12}$ 的密度曲线，其中 $s_\bar y=\sqrt{MS_E/b}=0.602771$，$m_i=\bar y_i$。曲线重叠仅作直观参考，正式逐对判断使用 $SE(\bar y_i-\bar y_j)=\sqrt{2MS_E/b}$，不能简单按两条均值区间是否重叠作显著性判断。
+绘制 $m_i+s_{\bar y} t_{12}$ 的密度曲线，其中 $s_{\bar y}=\sqrt{MS_E/b}=0.602771$，$m_i=\bar y_i$。曲线重叠仅作直观参考，正式逐对判断使用 $SE(\bar y_i-\bar y_j)=\sqrt{2MS_E/b}$，不能简单按两条均值区间是否重叠作显著性判断。
 
 估计量为 $\hat\mu_i=\bar y_{i\cdot}$，$\widehat{\mu_i-\mu_j}=\bar y_i-\bar y_j$；$LSD=t_{0.975,12}\sqrt{2MS_E/b}=1.85732$。差值的逐对 95% 区间为估计差 $\pm LSD$。
 

@@ -49,7 +49,7 @@ $$SS_E=SS_T-SS_A-SS_B,\quad F_0=\frac{SS_A/(a-1)}{SS_E/[(a-1)(b-1)]}\sim F_{a-1,
 
 **缺失／非正交资料的精确检验**：在保留下来的真实观测上拟合上述加性模型。令全模型和删去待检验因子的简化模型设计矩阵分别为 $X_F,X_R$，$H=X X^+$ 为正交投影，
 
-$$SS_E=y'(I-H_F)y,\quad SS_{A\mid\mathrm{其他}}=y'(H_F-H_R)y,$$
+$$SS_E=y'(I-H_F)y,\quad SS_{A\mid\text{其他}}=y'(H_F-H_R)y,$$
 $$F_0=\frac{[SSE_R-SSE_F]/[\operatorname{rank}X_F-\operatorname{rank}X_R]}{SSE_F/[N-\operatorname{rank}X_F]}.$$
 
 参数用最小二乘估计，检验 $H_0$：所有可估计的处理差为零；备择为至少一个不为零。误差仍须独立、正态、同方差。表中先列区组因子的顺序平方和，最后列调整后的处理平方和，使各项相加等于总平方和；它们不能全部当作偏平方和。

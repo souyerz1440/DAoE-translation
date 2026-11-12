@@ -30,7 +30,7 @@ description: 第9版习题4.41的中文题目、数据与答案解析
 
 **原假设与备择假设**：$H_0:\tau_1=\cdots=\tau_p=0$；$H_1$：至少一个处理效应不为零。设 $C=G^2/p^2$，各因子水平总和为 $U_l$，
 
-$$SS_T=\sum y^2-C,\qquad SS_{\mathrm{因子}}=\frac1p\sum_lU_l^2-C,$$
+$$SS_T=\sum y^2-C,\qquad SS_{\text{因子}}=\frac1p\sum_lU_l^2-C,$$
 $$SS_E=SS_T-SS_A-SS_R-SS_C,\qquad F_0=\frac{SS_A/(p-1)}{SS_E/[(p-1)(p-2)]}.$$
 
 显著性水平取 $0.05$；处理、行、列自由度各为 $p-1$，总自由度 $p^2-1$。

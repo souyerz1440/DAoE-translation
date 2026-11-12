@@ -99,14 +99,14 @@ LS=r'''**模型与假设**：$y_{ij}=\mu+\tau_{L(i,j)}+\rho_i+\kappa_j+\epsilon_
 
 **原假设与备择假设**：$H_0:\tau_1=\cdots=\tau_p=0$；$H_1$：至少一个处理效应不为零。设 $C=G^2/p^2$，各因子水平总和为 $U_l$，
 
-$$SS_T=\sum y^2-C,\qquad SS_{\mathrm{因子}}=\frac1p\sum_lU_l^2-C,$$
+$$SS_T=\sum y^2-C,\qquad SS_{\text{因子}}=\frac1p\sum_lU_l^2-C,$$
 $$SS_E=SS_T-SS_A-SS_R-SS_C,\qquad F_0=\frac{SS_A/(p-1)}{SS_E/[(p-1)(p-2)]}.$$
 
 显著性水平取 $0.05$；处理、行、列自由度各为 $p-1$，总自由度 $p^2-1$。
 '''
 GENERAL=r'''**缺失／非正交资料的精确检验**：在保留下来的真实观测上拟合上述加性模型。令全模型和删去待检验因子的简化模型设计矩阵分别为 $X_F,X_R$，$H=X X^+$ 为正交投影，
 
-$$SS_E=y'(I-H_F)y,\quad SS_{A\mid\mathrm{其他}}=y'(H_F-H_R)y,$$
+$$SS_E=y'(I-H_F)y,\quad SS_{A\mid\text{其他}}=y'(H_F-H_R)y,$$
 $$F_0=\frac{[SSE_R-SSE_F]/[\operatorname{rank}X_F-\operatorname{rank}X_R]}{SSE_F/[N-\operatorname{rank}X_F]}.$$
 
 参数用最小二乘估计，检验 $H_0$：所有可估计的处理差为零；备择为至少一个不为零。误差仍须独立、正态、同方差。表中先列区组因子的顺序平方和，最后列调整后的处理平方和，使各项相加等于总平方和；它们不能全部当作偏平方和。
@@ -161,7 +161,7 @@ def scaled(k,r):
     fig,ax=plt.subplots(figsize=(8,4));grid=np.linspace(stats.t.ppf(.001,r['df']),stats.t.ppf(.999,r['df']),400)
     for i,m in enumerate(mu):ax.plot(m+s*grid,stats.t.pdf(grid,r['df'])/s,label=f'处理 {i+1}')
     ax.scatter(mu,np.zeros_like(mu),color='black');ax.set(xlabel='处理均值尺度',ylabel='缩放 t 密度',title='各均值处的缩放 t 分布');ax.legend();fig.tight_layout();fig.savefig(IMG/f'ch4-{k}-scaled-t.png',dpi=160);plt.close(fig)
-    return f'![处理均值与缩放 t 分布](../../images/ch4-{k}-scaled-t.png)\n\n'+f'绘制 $m_i+s_\\bar y t_{{{int(r["df"])}}}$ 的密度曲线，其中 $s_\\bar y=\\sqrt{{MS_E/b}}={f(s)}$，$m_i=\\bar y_i$。曲线重叠仅作直观参考，正式逐对判断使用 $SE(\\bar y_i-\\bar y_j)=\\sqrt{{2MS_E/b}}$，不能简单按两条均值区间是否重叠作显著性判断。\n\n'+lsd(k,r)
+    return f'![处理均值与缩放 t 分布](../../images/ch4-{k}-scaled-t.png)\n\n'+f'绘制 $m_i+s_{{\\bar y}} t_{{{int(r["df"])}}}$ 的密度曲线，其中 $s_{{\\bar y}}=\\sqrt{{MS_E/b}}={f(s)}$，$m_i=\\bar y_i$。曲线重叠仅作直观参考，正式逐对判断使用 $SE(\\bar y_i-\\bar y_j)=\\sqrt{{2MS_E/b}}$，不能简单按两条均值区间是否重叠作显著性判断。\n\n'+lsd(k,r)
 
 P={}
 def page(n,title,q,a,source=None):P[n]=(title,q,a,source)

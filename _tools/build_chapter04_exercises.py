@@ -104,6 +104,31 @@ $$SS_E=SS_T-SS_A-SS_R-SS_C,\qquad F_0=\frac{SS_A/(p-1)}{SS_E/[(p-1)(p-2)]}.$$
 
 显著性水平取 $0.05$；处理、行、列自由度各为 $p-1$，总自由度 $p^2-1$。
 '''
+GLS=r'''**模型与假设**：依据教材 [§4.3 格拉科–拉丁方设计](../../../Chapter%2004/translations_zh/03_4.3_The_Graeco-Latin_Square_Design_zh.md) 的式（4.29），采用四因子加性模型
+
+$$y_{ijkl}=\mu+\theta_i+\tau_j+\omega_k+\Psi_l+\varepsilon_{ijkl}.$$
+
+其中 $i$ 为行，$j$ 为拉丁字母处理，$k$ 为希腊字母因子，$l$ 为列；$\theta_i,\tau_j,\omega_k,\Psi_l$ 分别为对应效应，所有下标均取 $1,\ldots,p$。只在设计安排的 $p^2$ 个单元上观测，行、列确定后，两个字母标签也随之确定，并非有 $p^4$ 个观测。四个因子均按固定效应处理，约束为
+
+$$\sum_i\theta_i=\sum_j\tau_j=\sum_k\omega_k=\sum_l\Psi_l=0.$$
+
+假定误差独立同分布为 $N(0,\sigma^2)$，四个因子效应可加，不存在交互作用。两个拉丁方正交：每个字母在每行、每列恰出现一次，且每个拉丁–希腊字母对恰出现一次。
+
+**原假设与备择假设**：拉丁字母处理检验 $H_0^{(L)}:\tau_1=\cdots=\tau_p=0$，$H_1^{(L)}$：至少一个 $\tau_j\ne0$。希腊字母因子检验 $H_0^{(G)}:\omega_1=\cdots=\omega_p=0$，$H_1^{(G)}$：至少一个 $\omega_k\ne0$。行、列检验分别以所有 $\theta_i=0$、所有 $\Psi_l=0$ 为原假设，备择均为至少一个相应效应非零。
+
+**平方和与检验统计量**：按教材表 4.19，令 $C_0=y_{....}^2/p^2$，点号表示对实际观测求和；以下总和均只遍历设计中的 $p^2$ 个观测。
+
+$$SS_T=\sum_{\text{实际观测}}y_{ijkl}^2-C_0,$$
+$$SS_R=\frac1p\sum_i y_{i...}^2-C_0,\qquad SS_C=\frac1p\sum_l y_{...l}^2-C_0,$$
+$$SS_L=\frac1p\sum_j y_{.j..}^2-C_0,\qquad SS_G=\frac1p\sum_k y_{..k.}^2-C_0,$$
+$$SS_E=SS_T-SS_R-SS_C-SS_L-SS_G,\qquad df_E=p^2-1-4(p-1)=(p-1)(p-3).$$
+
+对任一因子 $Q\in\{R,C,L,G\}$，
+
+$$MS_Q=\frac{SS_Q}{p-1},\qquad MS_E=\frac{SS_E}{(p-1)(p-3)},\qquad F_Q=\frac{MS_Q}{MS_E}\sim F_{p-1,(p-1)(p-3)}\quad(H_0^{(Q)}).$$
+
+取显著性水平 $\alpha=0.05$，以 $F_Q>F_{0.95;p-1,(p-1)(p-3)}$（或 $P<0.05$）拒绝相应原假设。四个因子的自由度各为 $p-1$，总自由度为 $p^2-1$。表中“处理”对应拉丁字母因子 $L$。
+'''
 GENERAL=r'''**缺失／非正交资料的精确检验**：在保留下来的真实观测上拟合上述加性模型。令全模型和删去待检验因子的简化模型设计矩阵分别为 $X_F,X_R$，$H=X X^+$ 为正交投影，
 
 $$SS_E=y'(I-H_F)y,\quad SS_{A\mid\text{其他}}=y'(H_F-H_R)y,$$
@@ -117,7 +142,8 @@ def report(k,**kwargs):
     r=compute(k,**kwargs); RESULT[str(k)+str(kwargs)]=dict(sse=r['sse'],df=int(r['df']),mse=r['mse'])
     prefix=LS if k in LATIN else RCBD
     if k in GREEK and kwargs.get('greek',True):
-        prefix=LS+'\n再加入希腊字母因子 $\\gamma_{G(i,j)}$（效应和为零），从总平方和再减去 $SS_G$；误差自由度改为 $(p-1)(p-3)$，其余假设与检验方式相同。\n'
+        context={40:r'本题 $p=5$；$\theta_i$ 为原料批次效应，$\Psi_l$ 为酸浓度效应，$\tau_j$ 为静置时间效应，$\omega_k$ 为催化剂浓度效应。误差自由度为 $(5-1)(5-3)=8$。',41:r'本题 $p=4$；$\theta_i$ 为装配次序效应，$\Psi_l$ 为操作员效应，$\tau_j$ 为装配方法效应，$\omega_k$ 为工作场所效应。误差自由度为 $(4-1)(4-3)=3$。'}
+        prefix=GLS+'\n'+context[k]+'\n'
     if kwargs.get('oneway'):
         prefix=r'''**模型与假设**：$y_{ij}=\mu+\tau_i+\epsilon_{ij}$，误差独立且服从 $N(0,\sigma^2)$。$H_0$：各处理均值相等；备择为至少一个不同。
 
